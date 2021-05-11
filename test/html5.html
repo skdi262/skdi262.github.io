@@ -10,11 +10,68 @@
             border: 1px solid black;
             font-size: 12px;
         }
+        /* style의 주석 */
+        /* 테이블 태그의 테두리선(border)을 병합 */
+        table {
+            border-collapse: collapse;
+        }
+        /* collapse는 제거하다라는 뜻 */
     </style>
 </head>
 <body>
-    <!-- 유투브 영상 가져오기 -->
-    <iframe width="100%" height="753" src="https://www.youtube.com/embed/TBzArOdCwm8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!-- 테이블 태그 제어 : 셀병합 
+    table, tr(table row : 줄 수), td(table data : 칸 수) table>(tr>td*3)*5-->
+    <table>
+        <tr>
+            <td>순번</td>
+            <td>책이름</td>
+            <td>가격</td>
+            <td>판매량</td>
+            <td>판매액</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>HTml</td>
+            <td>7000</td>
+            <td rowspan="2">1000</td>
+            <!-- 세로칸을 병합 -->
+            <td>7000*1000</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>JS</td>
+            <td>8000</td>
+            <!-- <td>500</td> -->
+            <td>8000*500</td>
+        </tr>
+        <tr>
+            <td colspan="4">합계</td>
+            <!-- colspan 가로 칸 셀 병합 -->
+            <td>14,000</td>
+        </tr>
+    </table>
+    
+    <!-- 폼태그 오브젝트, 엘리먼트 사용 -->
+    <!-- 액션 : 데이터 전송(method), radio(file), submit -->
+    <form action="html5.html" method = "get">
+        <input type="text" name="text" id="">
+        <input type="password" name="password" id="">
+        <input type="date" name="date" id="">
+        <input type="color" name="color" id="">
+        <input type="radio" name="radio" id="">
+        <input type="checkbox" name="check1" id="">
+        <input type="checkbox" name="chech2" id="">
+        <input type="radio" name="radio" id="">
+        <input type="file" name="file" id="">
+        <input type="file" name="file" id="">
+        <textarea name="textarea" id="" cols="30" rows="10"></textarea>
+        <input type="button" value="버튼">
+        <input type="reset" value="입력취소">
+        <input type="submit" value="서밋">
+        <!-- 서밋은 자료 전송 -->
+    </form>
+    <!-- 유투브 영상 가져오기 iframe -->
+    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/TBzArOdCwm8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     <!-- 컨텐츠 경로... 상대경로, 절대경로 -->
     <img style="width: 100%;" src="./img/view.jpg" alt="엑박일때 표시할 내용이 여기에">
     <img style="width: 100%;" src="/test/img/view.jpg" alt="엑박일때 표시할 내용이 여기에">
