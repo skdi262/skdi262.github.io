@@ -25,5 +25,21 @@
         </tr>
         <tbody></tbody>
     </table>
+    <div id="one">hello 자바 스크립트</div>
+    <script>
+        // 자바 스크립트는 프로그램이기 때문에 디버그용어 사용
+        /* 주석 사용법 개체(태그) 선택방법, 디버그 방법,
+         주석 사용방법 // : 한줄 주석
+         /*  : 여러줄 주석! */
+    document.getElementById('one').innerHTML = "헬 <h1>자바스크립트</h2>";
+    document.getElementById('one').innerText = "헬 <h1>자바스크립트</h2>";
+    //바디 안에 있는 문서를 말함 document
+    //옛 자바 스크립트를 배우는 이유는 IoT 때문에 배움
+    //IoT 임베디드프로그램에는 jQuery를 사용하지 못 할 수도 있음
+    //위 경우에는 옛 자바스크립트(네이티브 자바스크립트)를 사용해야함.
+    var debug = document.getElementById('one');
+    // window.alert(debug.innerText); #디버그 방법 1
+    console.log(debug.innerText); //디버그 방법 2 json 데이터 확인
+    </script>
 </body>
 </html>
