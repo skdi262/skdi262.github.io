@@ -27,6 +27,30 @@
     </table>
     <div id="one">hello 자바 스크립트</div>
     <script>
+        // 함수변수 
+        var plus = function(x,y) { //함수명이 없음 무명함수(anonymous, 콜백 = 자동실행 함수)
+            var z;
+            z = x + y;
+            return z;
+        }
+        document.write('plus라는 변수는 데이터 타입이 : ', typeof(plus));
+        document.write('<br>');
+        function plus(x,y) { //함수명이 있음
+            var z;
+            z=x+y;
+            return z;
+        }
+        document.write(plus(5,2));
+        document.write('<hr>');
+        // 연산자 3 : 논리 연산자 &&,||(파이프라인2개),!(NOT)
+        var x, y;
+        x = true; y = false;
+        document.write(x && y); //곱하기 1= true, 0= false = 1x0=0
+        document.write('<br>'); 
+        document.write(x || y); //더하기 1 + 0은 1
+        document.write('<br>');
+        document.write(!y); //반대연산 !false = true
+        document.write('<br>');
         var x, y;
         x = 5; y = 2; z= '5';
         document.write(x > y);
@@ -42,7 +66,7 @@
         document.write(x === z); // 숫자 5와 문자 5는 다르다 type 비교
         document.write('<hr>');
         // 비교 연산자 >, <, =, <=, >=, ==, ===
-         var x, y;
+        var x, y;
         x = 5; y = 2;
         document.write(x + y);
         document.write('<br>');
@@ -69,7 +93,7 @@
         // 변수= variable(number,string,object 객체) 사용에 대해서, 변할 수 있는 개체
         // 데이터를 사용하는 방법 : 
         // 기본형 ( number, string(문자열), object, boolean(true,false) )
-        // 사용자 정의형 ( function, object(array 배열형) )
+        // 사용자 정의형 ( function(함수), object(array 배열형) )
         var 변수1 = 100;//변수는 한글로 사용하면 안 됨 당연 
         document.write('변수타입은:', typeof(변수1));
         document.write(변수1+변수1);
