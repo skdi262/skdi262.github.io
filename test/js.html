@@ -27,6 +27,17 @@
     </table>
     <div id="one">hello 자바 스크립트</div>
     <script>
+        // 변수= variable(number,string,object 객체) 사용에 대해서, 변할 수 있는 개체
+        // 데이터를 사용하는 방법 : 
+        // 기본형 ( number, string(문자열), object, boolean(true,false) )
+        // 사용자 정의형 ( function, object(array 배열형) )
+        var 변수1 = 100;//변수는 한글로 사용하면 안 됨 당연 
+        document.write('변수타입은:', typeof(변수1));
+        document.write('<br>');//br = break return 중지하고 엔터
+        변수1= '문자열을 입력';
+        document.write('변수타입은:', typeof(변수1));
+        //입력된 값에 따라 변수의 형태가 결정이 됨
+        
         // 자바 스크립트는 프로그램이기 때문에 디버그용어 사용
         /* 주석 사용법 개체(태그) 선택방법, 디버그 방법,
          주석 사용방법 // : 한줄 주석
