@@ -27,6 +27,37 @@
     </table>
     <div id="one">hello 자바 스크립트</div>
     <script>
+        //내장함수란 웹 브라우저 내장 함수(자바 스크립트는 웹브라우저에 내장 되어있음.)
+        //데이터를 파싱한다고 한다 .
+        var txt = 'Kimseongjung is java';
+        var num = 10;
+        document.write(txt.length);
+        document.write('<br>');
+        document.write(txt.indexOf('se')); //찾은 문자열의 index 위치 리턴
+        document.write('<br>');
+        document.write(txt.slice(0,7)); // 시작 끝 위치 기준 문자 slice
+        //7이면 6까지 ; 7 미만.
+        document.write('<br>');
+        document.write(txt.replace('is', '는'));
+        document.write('<br>');
+        document.write(txt.toUpperCase());//대문자를 소문자로 바꿔줌
+        document.write('<br>');
+        document.write(txt.toLowerCase());//소문자로 바꿔줌
+        document.write('<br>');
+        document.write(num.toFixed(6));
+        //소수점을 값 만큼 찍어줌
+        document.write('<br>');
+        document.write(num+num.toString())
+        //계산하는 게 아니라 문자열로 바꿔줌
+        document.write('<br>');
+        //**은 제곱 
+        document.write('<br>');
+        document.write(x / y);
+        document.write('<br>');
+        document.write(x % y);
+        //나머지 구하기
+        document.write('<br>');
+
         // 함수변수 
         var plus = function(x,y) { //함수명이 없음 무명함수(anonymous, 콜백 = 자동실행 함수)
             var z;
