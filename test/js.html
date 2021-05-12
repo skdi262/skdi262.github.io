@@ -27,16 +27,60 @@
     </table>
     <div id="one">hello 자바 스크립트</div>
     <script>
+        var x, y;
+        x = 5; y = 2; z= '5';
+        document.write(x > y);
+        document.write('<br>');
+        document.write(x >= y);
+        document.write('<br>');
+        document.write(x < y);
+        document.write('<br>');
+        document.write(x <= y);
+        document.write('<br>');
+        document.write(x == z); //숫자 5와 문자 5는 같다 내용 비교
+        document.write('<br>');
+        document.write(x === z); // 숫자 5와 문자 5는 다르다 type 비교
+        document.write('<hr>');
+        // 비교 연산자 >, <, =, <=, >=, ==, ===
+         var x, y;
+        x = 5; y = 2;
+        document.write(x + y);
+        document.write('<br>');
+        document.write(x - y);
+        document.write('<br>');
+        document.write(x * y);
+        document.write('<br>');
+        document.write(x ** y);
+        //**은 제곱 
+        document.write('<br>');
+        document.write(x / y);
+        document.write('<br>');
+        document.write(x % y);
+        //나머지 구하기
+        document.write('<br>');
+        x++;y--;
+        document.write('x는 : ', x, '<br>y는 : ', y);
+        document.write('<br>');
+        x *= 3;// x = x * 3
+        document.write(x);
+        document.write('<hr>');
+        // hr 화면상에 수평선 긋기
+        x *= 3;
         // 변수= variable(number,string,object 객체) 사용에 대해서, 변할 수 있는 개체
         // 데이터를 사용하는 방법 : 
         // 기본형 ( number, string(문자열), object, boolean(true,false) )
         // 사용자 정의형 ( function, object(array 배열형) )
         var 변수1 = 100;//변수는 한글로 사용하면 안 됨 당연 
         document.write('변수타입은:', typeof(변수1));
-        document.write('<br>');//br = break return 중지하고 엔터
+        document.write(변수1+변수1);
+        document.write('<br>');// 줄바꿈 br = break return 중지하고 엔터
         변수1= '문자열을 입력';
         document.write('변수타입은:', typeof(변수1));
+        document.write(변수1+변수1);
         //입력된 값에 따라 변수의 형태가 결정이 됨
+        document.write('<br>');
+        var name = 'ksj';
+        document.write(name[2]) // 배열은 인덱스값을 가지고 있음
         
         // 자바 스크립트는 프로그램이기 때문에 디버그용어 사용
         /* 주석 사용법 개체(태그) 선택방법, 디버그 방법,
