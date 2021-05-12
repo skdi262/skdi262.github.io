@@ -14,6 +14,21 @@
         }
         th {width: 25%;}
     </style>
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script>
+        // jQuery로 간단하게 만들기
+        // jQuery CDN : Content Delivery Network 인터넷으로 외부 확장 프로그램을 가져다가 사용(인터넷 사용불가하면 불가능)
+        // 인터프리터 장단 : 위-아래 실행 순서를 신경쓰지 않아도 됨
+        // jQuery 기본 형식 :  $(id'선택자') -->
+        $(document).ready(function(){ 
+            $('#checkValue').click(function(){
+                alert($('#name').val());
+                $('#one').css('background-color','red');
+         });
+
+        });//문서(document)가 준비되었을때 ready를 시작해라.
+        // html 문서를 다 읽은 후에 내용이 실행됨
+    </script>
 </head>
 <body>
     <table id="board">
@@ -26,7 +41,156 @@
         <tbody></tbody>
     </table>
     <div id="one">hello 자바 스크립트</div>
+    <p class="two">Hello 자바스크립트 2</p>
+    <input type="text" name='name' id='name' value='테스트'>
+    <button onclick="checkValue('5억년')">입력값확인</button>
+    <button id="checkValue">jQuery 입력값 확인</button>
+    <br>
+
     <script>
+
+        // 복수의 elemant 선택
+        // var names = document.getElementById('name');
+        var inputName = document.getElementsByName('name');
+        var names = $('#name');
+        var twoClassName = document.getElementsByClassName('two');
+        console.log(twoClassName);
+        document.write('클래스 엘리먼트 내용 출력',twoClassName[0]['innerHTML']);
+        function checkValue(params) { //전송 받는 것
+            // alert(params + '버튼 클릭되었습니다.');
+            alert(names.val() + "입력한 값입니다.");
+            // document.getElementById('one').style.backgroundColor = 'red';
+            $('#one').css('backgroundColor','red');
+            
+        }
+        console.log(names);
+        document.write('<br>');
+
+        // 변수의 영역(scope)
+        // function 스코프 var, 블럭 scope let(변수 예약어), const
+        var i = 10;
+        var i2= 0;
+        if(i>5){
+            let i2 = 100;
+        }else{
+            let i2 = 200; //let 변수는 블럭 변수로 그 장소에서만 쓰인다.
+        }
+        function test(params) {
+            i2 = 200; //var를 쓰면 변수를 재정, 이 안에서 재정 된 변수는 밖에선 안 쓰임
+        }
+        test(1);
+        document.write(i2);
+        document.write('<hr>'); 
+        // 반복분2 : while 문
+        var arrays = [10,20,30,40,50];
+        var i = 0;
+        while (i < arrays.length) {
+            document.write(arrays[i]);
+        document.write('<br>');
+        i = i+1;
+        }
+        document.write('<hr>');        
+        // while문 주로 Iot쪽에서 많이 사용함 : 온도센서 값 입력할 때
+        // 반복문1: for 문 ~하는 동안 반복
+        for(var i=(arrays.length-1); i>=0; i--) {
+        //시작값, 종료값, 증가값
+        document.write(arrays[i]);
+        document.write('<br>');
+
+        }
+        document.write('<hr>');
+        // 조건문(if): 비교결과
+        if (1 > 3) {
+            document.write('If문 시작');
+        } else if (2==3) {
+            document.write('elseif');
+        } else if (true) {
+            document.write('elseif 두번째');
+        } else {
+            document.write('else');
+        }
+        document.write('<br>');
+        //선택문: Switch case 스위치 케이스 문
+        var key=5;
+        switch (key) {
+            case 1:
+                document.write(key,'를 선택했습니다.');
+                break;
+            case 2 :
+                document.write(key,'를 선택했습니다.');
+                break;
+            case 3 :
+                document.write(key,'를 선택했습니다.');
+                break;
+            default:
+                document.write('선택된 키가 없습니다.');
+                break;
+        }
+        document.write('<hr>');
+        // 옛날 인터넷 자료교환 대량 데이터 형식: xml 태그 방식
+        // 채신기술 : jason(Javascript Object Natation) 자바스크립트 객체 표시
+        // key,value로 구성, 데이터 형식이 섞여있어도 건웅
+        var human = {
+            name: {
+                firstname:"김",
+                lastname:'성중'
+            },
+            age : 27,//num
+            married : false //boolean
+        }
+        document.write(typeof(human));
+        document.write('<br>');
+        document.write(human['name']);
+        document.write('<br>');
+        document.write(human['name']['firstname']);
+        document.write('<br>');
+        document.write(human['age']);
+        //값을 파싱할때 키로 값을 뽑아낸다.
+        document.write('<hr>');
+        // object(array)형 데이터
+        // 기본형 데이터 : num, string,boolean
+        var arrays =[10,20,30,40,20];
+        document.write(typeof(arrays));
+        document.write('<br>');
+        document.write(arrays[2]);//배열도 0부터 시작
+        document.write('<br>');
+        document.write(arrays.slice(1,4));
+        document.write('<br>');
+        document.write(arrays)
+        document.write('<br>');
+        document.write(arrays.pop());//마지막 수를 표시하고 제외시킴
+        document.write('<br>');
+        document.write(arrays);
+        document.write('<br>');
+        document.write(arrays.push(1000));
+        //index의 제일 마지막 자리에 배치시킴
+        document.write('<br>');
+        document.write(arrays);
+        document.write('<br>');
+        document.write(arrays.join('!@'));
+        //각 값의 중간에 입력한 값이 나옴, 실제 array에 포함은 안 됨 1회용
+        document.write('<br>');
+        document.write(arrays.sort());
+        //오름차순 정렬
+        document.write('<br>');
+        document.write(arrays.reverse());
+        //내림차순 정렬
+        document.write('<br>');
+        //날짜 내장 함수
+        var date = new Date; //new 키워드로 함수형 변수 생성
+        var date2 = new Date; //웹브라우저 pc의 시간으로 변경
+        document.write('<br>');
+        document.write(date);
+        document.write('<br>');
+        document.write('<br>');
+        document.write(date.getMonth()+1);
+        document.write('<br>');
+        document.write(date.getDay());//요일 구하기
+        document.write('<br>');
+        document.write(date.getDate());//날짜
+        document.write('<br>');
+        document.write(date.getHours());
+        document.write('<br>');
         //내장함수란 웹 브라우저 내장 함수(자바 스크립트는 웹브라우저에 내장 되어있음.)
         //데이터를 파싱한다고 한다 .
         var txt = 'Kimseongjung is java';
@@ -47,16 +211,22 @@
         document.write(num.toFixed(6));
         //소수점을 값 만큼 찍어줌
         document.write('<br>');
-        document.write(num+num.toString())
+        document.write(num.toString()+num.toString());
         //계산하는 게 아니라 문자열로 바꿔줌
         document.write('<br>');
-        //**은 제곱 
+        document.write(Math.PI);//원주율 3.14~~~
         document.write('<br>');
-        document.write(x / y);
+        document.write(Math.max(10,20,30));
+        //max라는 값 안에서 최댓값을 찾아줌
         document.write('<br>');
-        document.write(x % y);
-        //나머지 구하기
+        document.write('<br>0~1 임의의값 구하기*10 : ');
         document.write('<br>');
+        h2 = Math.random()*10;
+        document.write(h2.toFixed(0));
+        document.write('<br>');
+        document.write(Math.random()*10);
+        document.write('<br>');
+        document.write('<hr>');
 
         // 함수변수 
         var plus = function(x,y) { //함수명이 없음 무명함수(anonymous, 콜백 = 자동실행 함수)
