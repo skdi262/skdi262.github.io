@@ -22,7 +22,7 @@
         가상요소(elment - 태그) : :hover 04 크기 단위 */
     h1 {background-color: coral;}
     div *{
-        color: blueviolet;
+        color: rgb(34, 8, 59);
     }
     /* 클래스 선택자는 앞에 .class 붙여야댐 점 중요 */
     .box-one, .box-two {background-color: crimson;}
@@ -53,14 +53,27 @@
         .box-one { width: 200px;
         height: 200px;
         background-color: darkolivegreen ;
-        padding: 20px;
+        padding: 20px;  /* 안쪽 여백 : 4가지 방향 12시작 시계방향 */
         box-sizing: border-box; 
         border: 10px solid black;
-         }
+        margin: 20px 10px 30px 80px;/*바깥 쪽 여백*/
+        /* 바깥 쪽 여백 2가지 방향 상하 / 좌우 */
+        margin: 30px 60px;
+        /* 가로 가운데 정렬하는 방법 auto */
+        margin: 0px;
+        margin: 0px auto;
+        margin: 0px ;
+        position: fixed;
+        /* absolute 자리가 다른 태그와 관련 없이 위치를 잡을 수 있음
+        fixed는 화면에 위치가 고정됨 */
+        margin-top: 20px;
+        margin-left: 20px;
+        }
         .box-two {
             width : 200px;
             height: 200px;
             background-color: darkslateblue;
+            box-sizing: border-box; 
         }
 </style>
 </head>
@@ -80,12 +93,15 @@
         경로 Path,(상대경로 절대경로)
         01 css 적용하는 3 가지 방법 확인, 내부 css, 외부 css, 인라인 css -->
     <h1>헬로 CSS</h1>
-    <div class="box-one"><p>one</p></div>
+    <div class="box-one"><p style="color: blanchedalmond;"><a href=""></a> 상단으로 이동
+        
+    </p></div>
     <div class="box-two"><a href="">two two two</a></div>
     <div class="box-three">three</div>
     <div id="box-four">four</div>
     <div id="box-five">five</div>
 
+    <p><span style="color: crimson;">Lorem ipsum</span> dolor sit amet consectetur adipisicing elit. Ipsam, voluptas quisquam laudantium sunt veritatis assumenda placeat doloremque nostrum cumque debitis totam voluptatum consectetur et similique at soluta labore voluptate eum?</p>
     <p><span style="color: crimson;">Lorem ipsum</span> dolor sit amet consectetur adipisicing elit. Ipsam, voluptas quisquam laudantium sunt veritatis assumenda placeat doloremque nostrum cumque debitis totam voluptatum consectetur et similique at soluta labore voluptate eum?</p>
 </body>
 </html>
