@@ -17,17 +17,22 @@ a:link {color: #444;}
 a:hover {color: #fff !important;}
 a:visited {color: #444;}
 a {text-decoration: none;}/*링크의 밑 줄이 사라짐 */
-.clear::after {content: '';
-clear: both;/* float(태그의 위치를 지정)값을 초기화 시켜줌*/
-display: block;}/* float을 clear 시키면 block속성이 사라지는데 그때 다시 bloock 속성을 부여하는 역할*/
-.txt_right {
-text-align: right !important ;
-}
-.mt20 {margin-top: 20px !important;}
-.w100p {
-width: 100% !important;
-}
+
 /* 공통영역 끝 */
+
+/* 부트스트랩 영향을 받는 class  */
+.clear::after {content: '';
+    clear: both;/* float(태그의 위치를 지정)값을 초기화 시켜줌*/
+    display: block;}/* float을 clear 시키면 block속성이 사라지는데 그때 다시 bloock 속성을 부여하는 역할*/
+.txt_right {
+    text-align: right !important ;
+    }
+    .mt20 {margin-top: 20px !important;}
+    .w100p {
+    width: 100% !important;
+    }
+
+/* //부트스트랩 CSS 수정 */
 /* 헤더 영역 */
 .on {
     background-color: #32353d;
@@ -45,3 +50,24 @@ header {
     width: 100%; margin: auto;
 }
 /* // 헤더영역 끝  */
+
+/* 로고 영역 */
+.header_area h1{ /*순차 별 진행 header_area 아래의 h1을 정의*/
+    float: none;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    padding: 3px 0 0; /*패딩에 세 값이 들어가있으면 순서대로 상하, 좌, 우 값을 지정함*/
+
+}
+.header_area h1 a { /*로고는 이미진데 글을 더 한 이유는 웹 접근성 떄문에 그러하다.(ex 시각장애인용 스크린리더*/
+    display: inline-block; /*줄 전체 차지 x 자기 크기만 차지*/ 
+    width: 150px;
+    height: 80px;
+    background: url(/home/img/logo-removebg-preview.png) no-repeat;/*css3는 함수를 지원합니덩*/
+    background-size: 50px 60px !important;
+    background-position: center center !important; /* 이미지 위치가 가로, 세로 둘다 가운데 정렬*/
+    text-indent: -9999px; /*들여쓰기 : 이미지만 보이고 글자는 숨기기 위해서,*/
+    overflow: hidden;
+}
+/* //로고 영역 끝 */

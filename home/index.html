@@ -17,26 +17,110 @@ chrome, IE, Edge, Safari, Fire Fox 에서 H1, p, ul, div 등 태그들의 크기
 <link rel="stylesheet" href="/home/css/mobile.css">
 <style>
 /* 모바일용 메인 페이지 지정 */
-/* 로고 영역 */
-.header_area h1{ /*순차 별 진행 header_area 아래의 h1을 정의*/
+/* 상단 메뉴 영역 */
+.openMOgnb {
+    /* gnb : 글로벌 네비게이션 바  */
+    display: block;
+    position: absolute;
+    left: 15px;
+    width: 25px;
+    height: 16px;
+    top: 35px;
+}
+.hdd {
+    text-indent: -9999px;
+    position: absolute;
+}
+.openMOgnb span {
+    box-sizing: border-box; /* 박스 크기를 테두리까지 크기로 고정 */
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin-bottom: 4px;
+    border-radius: 10px; /* 테두리를 라운드 처리 */
+    background: #fff;
+}
+.openMOgnb span + span { /* 형제 결합자 +는 첫 요소 다음 요소를 가리킨다. 같은 이름일 때 씀 */
+    width: 17px;
+}
+.openMOgnb span:last-child { /* 같은 계층에 있는 맨 마지막 요소*/
+    width: 25px;
+    margin-bottom: 0px;
+}
+
+.header_cont {
     float: none;
     width: 100%;
-    height: 50px;
-    text-align: center;
-    padding: 3px 0 0; /*패딩에 세 값이 들어가있으면 순서대로 상하, 좌, 우 값을 지정함*/
-
+    background-color: #31353d;
+    margin-top: 36px;
+    /* display none */
+} 
+.closePop {
+    display: block;
+    position: absolute;
+    right: 0px;
+    top: 10px;
 }
-.header_area h1 a { /*로고는 이미진데 글을 더 한 이유는 웹 접근성 떄문에 그러하다.(ex 시각장애인용 스크린리더*/
-    display: inline-block; /*줄 전체 차지 x 자기 크기만 차지*/ 
-    width: 150px;
-    height: 80px;
-    background: url(/home/img/logo.jpg);/*css3는 함수를 지원합니덩*/
-    background-size: 50px 60px !important;
-    background-position: center center !important; /* 이미지 위치가 가로, 세로 둘다 가운데 정렬*/
-    text-indent: -9999px; /*들여쓰기 : 이미지만 보이고 글자는 숨기기 위해서,*/
+.closePop {
+    display: block;
+    width: 60px; height: 60px;
+    text-indent: -9999px;
     overflow: hidden;
+    background: url(/home/img/btn_closeMenu.png) no-repeat;
 }
-/* //로고 영역 끝 */
+.util {padding: 20px;}
+.header_cont a {color: #fff; font-size: 16px; }
+.util li {float: left;}
+.util li::after { /* 가상요소를 추가 */
+    content: '|';
+    display: inline-block;
+    padding: 0 10px;
+    color: #a2a2a3;
+    top: -2px;
+}
+.util li:last-child::after {
+    content: ' ';
+    display: none;
+}
+.gnb {
+    float: none;
+    box-sizing: border-box;
+    padding-top: 0px;
+    height: auto;
+    border-top: 1px solid #83868b;
+}
+.gnb li {
+    float: left;
+    width: 50%;
+    text-align: left;
+    height: auto;
+    border-bottom: 1px solid #83868b;
+}
+.gnb li a {
+    display: block;
+    padding: 0 0 0 65px;
+    height: 60px;
+    line-height: 60px;
+    background: url(./img/ico_gnb01.png) no-repeat 10px center; /* 뒤에 있는 10 px는 가로로 `10px 만큼 떨어지라.*/
+    background-size: 49px 56px;
+}
+.gnb_depth {
+    display: none;
+} /* { 서브(2차메뉴) */
+
+.gnb li + li a {
+    background-image: url(./img/ico_gnb02.png);
+}
+.gnb li + li + li a {
+    background-image: url(./img/ico_gnb03.png);
+}
+.gnb li + li + li + li a {
+    background-image: url(./img/ico_gnb04.png);
+}
+.gnb li:nth-child(2n+1) {
+    border-right: 1px solid #83868b;
+}
+/* // 상단 메뉴 영역 끝 */
 </style>
 <script>
 $(document).ready(function() {
@@ -55,7 +139,12 @@ $(document).ready(function() {
 			<!-- //상단로고영역 -->
 			
 			<!-- 상단메뉴메뉴영역 -->
-			<p class="openMOgnb"><a href="#"><b class="hdd">메뉴열기</b> <span></span><span></span><span></span></a></p>
+			<p class="openMOgnb">
+                <a href="#">
+                <b class="hdd">메뉴열기</b>
+                 <span></span><span></span><span></span>
+                </a>
+            </p>
 			<div class="header_cont">
 				<ul class="util clear">
 					<li><a href="login.html">로그인</a></li>
