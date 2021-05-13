@@ -9,6 +9,11 @@
 - jQuery 코어 다운 받기 : min 버전(압축-속도),일반버전(개발)
 - 작업폴더 나누는 이유 : 관공서, 대학, 기업의 웹프로그램(사이트)를 제작하게 되면 제작 이후 무상 유지 보수를 하는데 이후 유지보수, 리뉴얼 비용이 책정됨
 - 리뉴얼 할 때는 덮어쓰는 게 아니라 다른 새로운 폴더를 만들어서 작업을 하게됨.
+- 픽사베이 이미지3개 : 로고 1, 슬라이드 이미지 1, noimage 받고 경로 적어놓기
+-https://pixabay.com/ko/photos/%EA%B2%A8%EC%9A%B8-%EB%88%88-%EA%B0%90%EA%B8%B0-%ED%99%94%EC%9D%B4%ED%8A%B8-%EC%84%9C%EB%A6%AC-260817/ 슬라이드
+-로고 : https://pixabay.com/ko/photos/%EC%95%84%EC%9D%B4%EC%8A%AC%EB%9E%80%EB%93%9C-%EB%B6%81%EA%B7%B9-%EC%97%AC%EC%9A%B0-%ED%8F%AD%EC%8A%A4-1979445/
+-no image : https://pixabay.com/ko/vectors/%EB%B9%99%EC%82%B0-iceburg-%EC%96%BC%EC%9D%8C-2070977/
+
 
 #### 20210511 화 작업내역
 - 로렘입숨 기억하기
