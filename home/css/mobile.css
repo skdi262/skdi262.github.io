@@ -1,2 +1,47 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+/* 모바일용 메인페이지 스타일 지정 */
+/* 공통 영역 */
+body { /* body 태그에는 a태그가 적용이 되지 않는다.*/
+font-family: 'Nanum Gothic', sans-serif;
+font-size: 16px !important;/* important 는 다른 css 가 작동되어 있어도 body 폰트 크기는 16px로 고정*/
+letter-spacing: -1px !important;
+color: #444 !important;
+word-wrap: break-word !important; /* 줄 바꿈 할 때, 단어가 분리가 되지 않고 줄바꿈이 가능함(단어단위) */
+line-height: 1 !important;/* 단위(px, em 이런 거)가 없으면 배수임.*/
+};
+/* 정의 */
+dl, ol, ul { margin-bottom: 0 !important;}
+#container a:hover {color: #000 !important;} /*가상 선택자는 :이 가상 선택자, :: 가상 요소*/
+a:link {color: #444;}
+a:hover {color: #fff !important;}
+a:visited {color: #444;}
+a {text-decoration: none;}/*링크의 밑 줄이 사라짐 */
+.clear::after {content: '';
+clear: both;/* float(태그의 위치를 지정)값을 초기화 시켜줌*/
+display: block;}/* float을 clear 시키면 block속성이 사라지는데 그때 다시 bloock 속성을 부여하는 역할*/
+.txt_right {
+text-align: right !important ;
+}
+.mt20 {margin-top: 20px !important;}
+.w100p {
+width: 100% !important;
+}
+/* 공통영역 끝 */
+/* 헤더 영역 */
+.on {
+    background-color: #32353d;
+}
+header {
+    height: 90px;
+    text-align: center;
+    z-index: 200; /* z의 순서 : 겹쳤을 때 상하관계를 나타냄 아래에 있을 수록 낮은 숫자 */
+    background-color: rgba(0, 0, 0, 0.5); /*a = alpha 투명도 값을 나타냄 높을수록 진함(0~1 까지)*/
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%;
+}
+.box_inner {
+    width: 100%; margin: auto;
+}
+/* // 헤더영역 끝  */
