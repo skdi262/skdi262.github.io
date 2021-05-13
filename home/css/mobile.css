@@ -71,3 +71,107 @@ header {
     overflow: hidden;
 }
 /* //로고 영역 끝 */
+/* 상단 메뉴 영역 */
+.openMOgnb {
+    /* gnb : 글로벌 네비게이션 바  */
+    display: block;
+    position: absolute;
+    left: 15px;
+    width: 25px;
+    height: 16px;
+    top: 35px;
+}
+.hdd {
+    text-indent: -9999px;
+    position: absolute;
+}
+.openMOgnb span {
+    box-sizing: border-box; /* 박스 크기를 테두리까지 크기로 고정 */
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin-bottom: 4px;
+    border-radius: 10px; /* 테두리를 라운드 처리 */
+    background: #fff;
+}
+.openMOgnb span + span { /* 형제 결합자 +는 첫 요소 다음 요소를 가리킨다. 같은 이름일 때 씀 */
+    width: 17px;
+}
+.openMOgnb span:last-child { /* 같은 계층에 있는 맨 마지막 요소*/
+    width: 25px;
+    margin-bottom: 0px;
+}
+
+.header_cont {
+    float: none;
+    width: 100%;
+    background-color: #31353d;
+    margin-top: 36px;
+    /* display none */
+} 
+.closePop {
+    display: block;
+    position: absolute;
+    right: 0px;
+    top: 10px;
+}
+.closePop {
+    display: block;
+    width: 60px; height: 60px;
+    text-indent: -9999px;
+    overflow: hidden;
+    background: url(/home/img/btn_closeMenu.png) no-repeat;
+}
+.util {padding: 20px;}
+.header_cont a {color: #fff; font-size: 16px; }
+.util li {float: left;}
+.util li::after { /* 가상요소를 추가 */
+    content: '|';
+    display: inline-block;
+    padding: 0 10px;
+    color: #a2a2a3;
+    top: -2px;
+}
+.util li:last-child::after {
+    content: ' ';
+    display: none;
+}
+.gnb {
+    float: none;
+    box-sizing: border-box;
+    padding-top: 0px;
+    height: auto;
+    border-top: 1px solid #83868b;
+}
+.gnb li {
+    float: left;
+    width: 50%;
+    text-align: left;
+    height: auto;
+    border-bottom: 1px solid #83868b;
+}
+.gnb li a {
+    display: block;
+    padding: 0 0 0 65px;
+    height: 60px;
+    line-height: 60px;
+    background: url(../img/ico_gnb01.png) no-repeat 10px center; /* 뒤에 있는 10 px는 가로로 `10px 만큼 떨어지라.*/
+    background-size: 49px 56px;
+}
+.gnb li + li a {
+    background-image: url(../img/ico_gnb02.png);
+}
+.gnb li + li + li a {
+    background-image: url(../img/ico_gnb02.png);
+}
+.gnb li + li + li + li a {
+    background-image: url(../img/ico_gnb02.png);
+}
+.gnb li:nth-child(2+1n) {
+    border-right: 1px solid #83868b;
+}
+
+.gnb_depth {
+    display: none;
+} /* { 서브(2차메뉴) */
+/* // 상단 메뉴 영역 끝 */
