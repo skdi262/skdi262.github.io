@@ -170,7 +170,6 @@ header {
 .gnb li:nth-child(2+1n) {
     border-right: 1px solid #83868b;
 }
-
 .gnb_depth {
     display: none;
 } /* { 서브(2차메뉴) */
