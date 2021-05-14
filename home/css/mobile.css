@@ -8,9 +8,7 @@ font-size: 16px !important;/* important 는 다른 css 가 작동되어 있어�
 letter-spacing: -1px !important;
 color: #444 !important;
 word-wrap: break-word !important; /* 줄 바꿈 할 때, 단어가 분리가 되지 않고 줄바꿈이 가능함(단어단위) */
-line-height: 1 !important;/* 단위(px, em 이런 거)가 없으면 배수임.*/
-};
-/* 정의 */
+line-height: 1 !important;/* 단위(px, em 이런 거)가 없으면 배수임.*/}/* 정의 */
 dl, ol, ul { margin-bottom: 0 !important;}
 #container a:hover {color: #000 !important;} /*가상 선택자는 :이 가상 선택자, :: 가상 요소*/
 a:link {color: #444;}
@@ -121,7 +119,7 @@ header {
     text-indent: -9999px;
     overflow: hidden;
     background: url(/home/img/btn_closeMenu.png) no-repeat;
-    box-sizing: 60px;
+    box-sizing: border-box;
 }
 .util {padding: 20px;}
 .header_cont a {
