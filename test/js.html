@@ -15,6 +15,27 @@
         th {width: 25%;}
     </style>
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+<script src="/test/json.js"></script>
+<script>
+    console.log(jsonData);
+    //jsonData를 parsing해서 #board 영역에 동적으로 출력
+    $(document).ready(function () {
+        for(var i=0; i<jsonData.length; i++){
+        // 제이슨데이터를 하나 씩 뽑아서 table >tr>td에 출력함
+        // append는 가상선택자의 :after와 똑같당
+        $('#board tbody').append('<tr>');
+        $('#board tbody').append('<td style = "text-align:center;">' + (i+1) + '</td>' );
+        $('#board tbody').append('<td>' + jsonData[i]['_id'] + '</td>');
+        $('#board tbody').append('<td>' + jsonData[i]['age'] + '</td>');
+        $('#board tbody').append('<td>' + jsonData[i]['eyecolor'] + '</td>');
+        $('#board tbody').append('<td>' + jsonData[i]['name'] + '</td>');
+        $('#board tbody').append('</tr>');
+    }
+    });
+</script>
+    <script>
+        // 외부 jSon 데이터를 body 라는 태그 안에 #board 내부에 파싱
+    </script>    
     <script>
         // jQuery로 간단하게 만들기
         // jQuery CDN : Content Delivery Network 인터넷으로 외부 확장 프로그램을 가져다가 사용(인터넷 사용불가하면 불가능)
@@ -32,6 +53,7 @@
 <body>
     <table id="board">
         <tr>
+            <th>No.</th>
             <th>id</th>
             <th>age</th>
             <th>eyecolor</th>
