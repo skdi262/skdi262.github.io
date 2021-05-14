@@ -4,8 +4,24 @@
 -RestAPI 서버 중 코로나 19 확지낮 데이터를 받아서 html에서 파싱
 -REstAPI 서버 주소(빅데이터) : htgetdatatps://coroname.me/
 
+#### 20210517(월)
+- 메인페이지 자바스크립트 적용(VS,Jquery)
+- 제이쿼리 적용 부분 : 메뉴, 슬라이드 3개 처리 : 모바일만 마무리
+- 태블릿 메인 css 스타일 처리, pc용 메인 css처리
+- 모바일 서브페이지 (스타일처리)
+- 태블릿 + pc용 CSS 스타일 처리
+- 모바일용 게시판(CURD) 처리
+- 태블릿 + pc용 CSS 스타일 처리
+- 모바일 + 태블릿 + pc용 댓글 처리
+- 모바일 + 태블릿 + pc 용 댓글시스템 CSS+제이쿼리 +부트스트랩 처리
+- adminLTE(부트스트랩 기반 템플릿{기본이 반응형})사용
+- UI 디자인  - 끝 -
+- UI 구현 시작 ----- 스프링 프로젝트 시작 (자바 + 오라클 + 스프링 + 이클립스)
+- UI 구현 : 위에서 제작한 UI디자인을 이용해 프로그램을 입힘
+
 #### 20210514 금 작업내역
 - CSS3, html5로 유효성 검사하기
+- footer 부분 만들기
 
 #### 201013 목 작업내역 : jQuery, Json 데이터 파싱
 - 모바일 메인 페이지를 만들어서 과제로 제출 - > 스프링에서 프로그램 입히는 소스로 사용
@@ -14,7 +30,7 @@
 - 리뉴얼 할 때는 덮어쓰는 게 아니라 다른 새로운 폴더를 만들어서 작업을 하게됨.
 - 픽사베이 이미지3개 : 로고 1, 슬라이드 이미지 1, noimage 받고 경로 적어놓기
 -https://pixabay.com/ko/photos/%EA%B2%A8%EC%9A%B8-%EB%88%88-%EA%B0%90%EA%B8%B0-%ED%99%94%EC%9D%B4%ED%8A%B8-%EC%84%9C%EB%A6%AC-260817/ 슬라이드
--로고 : https://pixabay.com/ko/photos/%EC%95%84%EC%9D%B4%EC%8A%AC%EB%9E%80%EB%93%9C-%EB%B6%81%EA%B7%B9-%EC%97%AC%EC%9A%B0-%ED%8F%AD%EC%8A%A4-1979445/
+- https://pixabay.com/ko/photos/%EC%95%84%EC%9D%B4%EC%8A%AC%EB%9E%80%EB%93%9C-%EB%B6%81%EA%B7%B9-%EC%97%AC%EC%9A%B0-%ED%8F%AD%EC%8A%A4-1979445/ 로고
 -no image : https://pixabay.com/ko/vectors/%EB%B9%99%EC%82%B0-iceburg-%EC%96%BC%EC%9D%8C-2070977/
 
 
