@@ -219,7 +219,7 @@ ul.viewImgList li {
 li.imglist0 {
     position: relative;
     z-index: 50;
-    background: url() no-repeat;
+    background: url(/home/img/main.jpg) no-repeat;
 }
 li.imglist1 {
     position: absolute;
@@ -336,3 +336,98 @@ li.imglist2 {
 }
 /* // 공지사항 최근 게시물 영역 */
 /* //본문 컨테이너 영역 */
+/* 푸터 스타일 */
+footer {
+	border-top: 1px solid #ddd;
+
+}
+.foot area { /* 일단 모바일에서는 적용 안 됨, pc, 태블릿은 될 듯*/
+	box-sizing: border-box;
+	padding: 0 20px 90px;
+	position: relative;/* relative로 해주는 건 태그의 기준으로 하는 위치이기 때문!*/
+}
+.foot_list {
+	padding-top: 25px;
+}
+.foot_list li {
+	float: left;
+}
+.foot_list li:first-child::after {
+	content: '|';
+	display: inline-block;
+	padding: 0 10px;
+	font-size: 10px;
+	position: relative;
+	top: -2px;
+}
+.foot_list li a {
+	font-weight: bold;
+	font-size: 15px;
+}
+.foot_list li a:hover {
+	color: black !important;
+}
+.foot_area h2 {
+	padding-top: 15px;
+	font-size: 14px; /* px : 픽셀, em, Rem*/
+	color: #666;
+}
+.addr { /*adderss의 약자*/
+	line-height: 1.3 ; /* 기존의 13배 */
+	font-size: 14px;
+	color: #767676;
+	padding-top: 5px;
+}
+.br_line {display: block;}
+.copy {
+	padding : 3px 0 20px;
+	font-size: 14px;
+	color: #767676;
+}
+.snslink {
+	position: static;/* static은 고정값, relative는 다른 태그 기준으로 상대값 이게 기본이긴함*/
+	width: 210px;
+	margin: 10px auto; /* auto는 가운데 정렬*/
+}
+.snslink li:first-child {
+	margin-left: 0px;
+}
+.snslink a {
+	margin-left: 15px;
+	float: left;
+}
+.snslink li a {
+	display: block;
+	width: 50px;
+	height: 74px;
+	text-indent: -9999px;
+	overflow: hidden;
+	background: url(/home/img/ico_blog_r.png) no-repeat ;
+}
+.snslink li + li a {
+	background-image: url(/home/img/ico_instargram_r.png) ;
+}
+.snslink li + li + li a {
+	background-image: url(/home/img/ico_facebook_r.png);
+}
+/* //푸터스타일 끝 */
+/* 퀵메뉴 영역 */
+.to_top {
+	position: fixed;
+	right: 20px;
+	bottom: 100px;
+	text-align: center;
+	background: none;
+	z-index: 100; /* 슬라이드 이미지랑 겹치면 안 보이게 하기위해서 */
+}
+.to_top a {
+	display: block;
+	width: 45px;
+	height: 45px;
+	background: url(/home/img/ico_totop_mo.png) no-repeat center;
+	background-size: 45px;
+	box-sizing: border-box;
+	text-indent: -9999px;
+	overflow: hidden;
+}
+/* //퀵메뉴 영역 끝 */
