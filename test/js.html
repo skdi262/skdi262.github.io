@@ -17,11 +17,70 @@
 <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 <script src="/test/json.js"></script>
 <script>
+    $(document).ready(function(){
+        // RestApi 제공하는 곳 : 공공데이터 포털, 네이버 , 구글, 인스타 ,페북, 카카오 등등
+        // RestApi 서버에서 받은 빅데이터를 파싱
+        //$.ajax({}) Asycronous javascript and Xml 비동기 자바스크립트와 Xml 데이터
+        //요즘은 xml 대신에 json 데이터를 사용함
+        // 비동기 vs 동기 
+        // 동기 : (웹프로그램은 기본 = 옛날 에는 동영상 플레이시 100mb 모두 다운로드)
+        // 비동기 : 위와 같은 경우엔 다중작업이 안 되기에 이를 방지하기 위해 비동기를 사용
+        // $.ajax 함수로 비동기 데이터(xml -> json) 전송을 사용함  
+    $.ajax({
+        type:'get', //method get 방식 : (검색), post(보안필요 : 입력, 수정, 삭제)
+        url:'https://coroname.me/getdata', //RestApi 주소
+        dataType: 'json', //RestApi 서버에서 전송받은 데이터 형식을 명시, json, text
+        success:function(result){
+            // var jsonData = JSON.parse(result);
+            var jsonData = result.data;
+            console.log(jsonData); // result는 위 url에서 dataType형식 으로 받은 자료가 저장됨
+            var i = 0; 
+            //향상된 for 반복문
+            for(var jsonOne of jsonData){
+                i = i + 1; 
+                $('#board #tbody').append('<tr >');
+            $('#board #tbody').append('<td style = "text-align:center;">' + (i) + '</td>' );
+            $('#board #tbody').append('<td style = "background-color : red">' + jsonOne.place + '</td>');            
+            $('#board #tbody').append('<td>' + jsonOne.latlng  + '</td>');
+            $('#board #tbody').append('<td>' + jsonOne.createDate + '</td>');
+            $('#board #tbody').append('<td>' + jsonOne.region + '</td>');
+            $('#board #tbody').append('</tr>');
+            }
+            // 오리지널 for 문 사용
+            // 2차원 배열 [][](표- 데이터 베이스db의 테이블)
+            var i = 0 ; // 인덱스 값 초기화
+            for(i=0; i<jsonData.length; i++){
+                if(i==10){break;}
+                $('#board #tbody').append('<tr >');
+            $('#board #tbody').append('<td style = "text-align:center;">' + (i+1) + '</td>' );
+            $('#board #tbody').append('<td style = "background-color : green">' + jsonData[i]['place'] + '</td>');            
+            $('#board #tbody').append('<td>' + jsonData[i]['latlng'] + '</td>');
+            $('#board #tbody').append('<td>' + jsonData[i]['createDate'] + '</td>');
+            $('#board #tbody').append('<td>' + jsonData[i]['region'] + '</td>');
+            $('#board #tbody').append('</tr>');
+            }
+        },
+        error:function(){
+            alert('RestAPI 서버에 문제가 발생했습니다. 나중에 이용해주세욥...');
+        }//url Rest 서버가 다운됐거나 프로그램 에러 일 때 처리할 내용
+    })
+})
     console.log(jsonData);
     //jsonData를 parsing해서 #board 영역에 동적으로 출력
-    $(document).ready(function () {
-        // for(var i=0; i<jsonData.length; i++){
-        // 제이슨데이터를 하나 씩 뽑아서 table >tr>td에 출력함
+    $(document).ready(function () { // 제이슨데이터를 하나 씩 뽑아서 table >tr>td에 출력함
+        // jsp(스프링)방식에서 파싱하는 방법
+        // 향상된 for 반복문
+        var i = 0;
+        for(var jsonOne of jsonData){
+            i = i + 1;
+            $('#board #tbody').append('<tr >');
+            $('#board #tbody').append('<td style = "text-align:center;">' + (i) + '</td>' );
+            $('#board #tbody').append('<td style = "background-color : red">' + jsonOne._id + '</td>');            
+            $('#board #tbody').append('<td>' + jsonOne.age  + '</td>');
+            $('#board #tbody').append('<td>' + jsonOne.eyecolor + '</td>');
+            $('#board #tbody').append('<td>' + jsonOne.name + '</td>');
+            $('#board #tbody').append('</tr>');
+        }
         // jQuery파싱 방법
         // $.each(json 데이터 object, 콜 백 함수function(index, jsonOne){}) : 
         $.each(jsonData, function(index, jsonOne){
@@ -30,7 +89,7 @@
             $('#board #tbody').append('<tr >');
             $('#board #tbody').append('<td style = "text-align:center;">' + (index+1) + '</td>' );
             $('#board #tbody').append('<td style = "background-color : skyblue">' + jsonOne._id + '</td>');
-            $('#board #tbody').append('<td>' + jsonOne._age  + '</td>');
+            $('#board #tbody').append('<td>' + jsonOne.age  + '</td>');
             $('#board #tbody').append('<td>' + jsonOne.eyecolor + '</td>');
             $('#board #tbody').append('<td>' + jsonOne.name + '</td>');
             $('#board #tbody').append('</tr>');

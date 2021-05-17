@@ -1,10 +1,11 @@
 #### 작업 예정
--외부 data.js 파일에서 json 데이터를 저장한 후 html에 불러와서 파싱
--외부 사이트에서 제공하는(RestAPI서버) json데이터를 jtml에 불러와 파싱
--RestAPI 서버 중 코로나 19 확지낮 데이터를 받아서 html에서 파싱
--REstAPI 서버 주소(빅데이터) : htgetdatatps://coroname.me/
+- 
 
 #### 20210517(월)
+- 외부 data.js 파일에서 json 데이터를 저장한 후 html에 불러와서 파싱
+- 외부 사이트에서 제공하는(RestAPI서버) json데이터를 jtml에 불러와 파싱
+- RestAPI 서버 중 코로나 19 확지낮 데이터를 받아서 html에서 파싱
+- REstAPI 서버 주소(빅데이터) : htgetdatatps://coroname.me/
 - 메인페이지 자바스크립트 적용(VS,Jquery)
 - 제이쿼리 적용 부분 : 메뉴, 슬라이드 3개 처리 : 모바일만 마무리
 - 태블릿 메인 css 스타일 처리, pc용 메인 css처리
