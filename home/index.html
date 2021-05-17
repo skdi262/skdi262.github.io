@@ -30,7 +30,7 @@ var slidePlayHide = setTimeout(function(){
 $('.rollplay').css("display","none")}, 3000);
 $('.rollstop a').click(function(){
 //현재 클릭한 본인 태그를 말한다.
-	$(this).parent.hide();//현재 stop 버튼을 숨김
+	$(this).parent().hide();//현재 stop 버튼을 숨김
 	$('.rollplay').css('display','inline-block');
 	if(slideAuto){
 		clearTimeout(slideAuto) //slideAuto 라는 변수가 없다면, play_w함수를 실행 중지

@@ -41,7 +41,5 @@ else if(slideNum == 2){
 // 플래그 true일 때 자동 슬라이드, false일때 슬라이드 멈춤
 if(slideAuto) {
     clearTimeout(slideAuto);//play W 라는 함수를 실행 중지함
-}
-slideAuto = setTimeout('play_w("right")' ,3000); //3초(3000ms)단위로 play_w라는 함수를 실행해라 
-}
-//위에서 함수 | 변수 사용
+    slideAuto = setTimeout('play_w("right")' ,3000);} //3초(3000ms)단위로 play_w라는 함수를 실행해라 
+}//위에서 함수 | 변수 사용
