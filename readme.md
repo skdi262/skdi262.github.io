@@ -8,6 +8,7 @@
 - REstAPI 서버 주소(빅데이터) : htgetdatatps://coroname.me/
 - 메인페이지 자바스크립트 적용(VS,Jquery)
 - 제이쿼리 적용 부분 : 메뉴, 슬라이드 3개 처리 : 모바일만 마무리
+- 보통 이미지 슬라이드 처리는 외부 라이브러리를 많이 사용한다.(니보슬라이드 , 케로셀)
 - 태블릿 메인 css 스타일 처리, pc용 메인 css처리
 - 모바일 서브페이지 (스타일처리)
 - 태블릿 + pc용 CSS 스타일 처리
@@ -34,7 +35,8 @@
 -https://pixabay.com/ko/photos/%EA%B2%A8%EC%9A%B8-%EB%88%88-%EA%B0%90%EA%B8%B0-%ED%99%94%EC%9D%B4%ED%8A%B8-%EC%84%9C%EB%A6%AC-260817/ 슬라이드
 - https://pixabay.com/ko/photos/%EC%95%84%EC%9D%B4%EC%8A%AC%EB%9E%80%EB%93%9C-%EB%B6%81%EA%B7%B9-%EC%97%AC%EC%9A%B0-%ED%8F%AD%EC%8A%A4-1979445/ 로고
 -no image : https://pixabay.com/ko/vectors/%EB%B9%99%EC%82%B0-iceburg-%EC%96%BC%EC%9D%8C-2070977/
-
+https://pixabay.com/ko/photos/%EB%88%88-%EB%82%98%EB%AC%B4-%EA%B2%A8%EC%9A%B8-%EA%B0%90%EA%B8%B0-1840617/
+https://pixabay.com/ko/photos/%ED%99%94%EC%9D%B4%ED%8A%B8-%ED%8F%AD%EC%8A%A4-%EB%88%88-%EB%B6%81%EA%B7%B9-1853508/
 
 #### 20210511 화 작업내역
 - 로렘입숨 기억하기

@@ -223,13 +223,13 @@ li.imglist1 {
     position: absolute;
     z-index: 10;
     left: 0;top: 0;
-    background: url(/home/img/main.jpg) no-repeat;
+    background: url(/home/img/main2.jpg) no-repeat;
 }
 li.imglist2 {
     position: absolute;
     z-index: 10;
     left: 0;top: 0;
-    background: url(/home/img/main.jpg) no-repeat;
+    background: url(/home/img/main3.jpg) no-repeat;
 }
 .roll_content {
     position: static; /* 기본 포지션 */
