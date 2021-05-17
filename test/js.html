@@ -20,18 +20,31 @@
     console.log(jsonData);
     //jsonData를 parsing해서 #board 영역에 동적으로 출력
     $(document).ready(function () {
-        for(var i=0; i<jsonData.length; i++){
+        // for(var i=0; i<jsonData.length; i++){
         // 제이슨데이터를 하나 씩 뽑아서 table >tr>td에 출력함
-        // append는 가상선택자의 :after와 똑같당
-        $('#board tbody').append('<tr>');
-        $('#board tbody').append('<td style = "text-align:center;">' + (i+1) + '</td>' );
-        $('#board tbody').append('<td>' + jsonData[i]['_id'] + '</td>');
-        $('#board tbody').append('<td>' + jsonData[i]['age'] + '</td>');
-        $('#board tbody').append('<td>' + jsonData[i]['eyecolor'] + '</td>');
-        $('#board tbody').append('<td>' + jsonData[i]['name'] + '</td>');
-        $('#board tbody').append('</tr>');
-    }
-    });
+        // jQuery파싱 방법
+        // $.each(json 데이터 object, 콜 백 함수function(index, jsonOne){}) : 
+        $.each(jsonData, function(index, jsonOne){
+            //레코드 : 필드로 이루어짐(_id, age , eyecolor, name)
+            if (index==10){return false;}
+            $('#board #tbody').append('<tr >');
+            $('#board #tbody').append('<td style = "text-align:center;">' + (index+1) + '</td>' );
+            $('#board #tbody').append('<td style = "background-color : skyblue">' + jsonOne._id + '</td>');
+            $('#board #tbody').append('<td>' + jsonOne._age  + '</td>');
+            $('#board #tbody').append('<td>' + jsonOne.eyecolor + '</td>');
+            $('#board #tbody').append('<td>' + jsonOne.name + '</td>');
+            $('#board #tbody').append('</tr>');
+        })
+        for(var i=0; i<jsonData.length; i++) {
+            if(i==10){break;} 
+        $('#board #tbody').append('<tr >');
+            $('#board #tbody').append('<td style = "text-align:center;">' + (i+1) + '</td>' );
+            $('#board #tbody').append('<td style = "background-color : skyblue">' + jsonData[i]['_id'] + '</td>');
+            $('#board #tbody').append('<td>' + jsonData[i]['age']  + '</td>');
+            $('#board #tbody').append('<td>' + jsonData[i]['eyecolor'] + '</td>');
+            $('#board #tbody').append('<td>' + jsonData[i]['name'] + '</td>');
+            $('#board #tbody').append('</tr>');// append는 가상선택자의 :after와 똑같당        
+    }});
 </script>
     <script>
         // 외부 jSon 데이터를 body 라는 태그 안에 #board 내부에 파싱
@@ -59,7 +72,7 @@
             <th>eyecolor</th>
             <th>name</th>
         </tr>
-        <tbody></tbody>
+        <tbody id='tbody'></tbody>
     </table>
     <div id="one">hello 자바 스크립트</div>
     <p class="two">Hello 자바스크립트 2</p>
