@@ -12,8 +12,7 @@ function play_w(directw) { // 좌우로 슬라이드 되는 함수 선언
         slideNum = slideNum -1;
         if(slideNum < 0) {slideNum = 2;}
     }		
-    // else {
-    // 	slideNum = directw; //string으로 형태 변환
+    else {slideNum = directw;} //string으로 형태 변환
     //li 태그에서 클래스 seq인 것3개를 each함수로 반복(3번)
 $(".rollingbtn").find('li.seq a').each(function(){
 $('.rollingbtn li.seq a img').attr('src',$('.rollingbtn li.seq a img').attr('src').replace('_on.png','_off.png'));

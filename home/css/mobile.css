@@ -337,7 +337,7 @@ li.imglist2 {
 /* 푸터 스타일 */
 footer {
 	border-top: 1px solid #ddd;
-
+    text-align: left;
 }
 .foot area { /* 일단 모바일에서는 적용 안 됨, pc, 태블릿은 될 듯*/
 	box-sizing: border-box;
