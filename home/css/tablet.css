@@ -1,0 +1,79 @@
+/* 태블릿용 메인페이지 지정 */
+@charset "UTF-8";
+@media all and (min-width:801px){
+header {
+		height: 113px;
+	}
+	.header_area h1 {
+		float : left; 
+		padding: 15px 0;
+		padding-left: 20px;
+		width: auto;
+		height: inherit; /* 현재 영역 부모 클래스의 높이를 그대로 가져다 씀. 상속*/
+		text-align: inherit;
+	}
+	.header_area h1 a {
+		display: block;
+		width: 100px;
+		height: 80px;
+		background-size: 70px 80px !important;
+	}
+	.openMOgnb {
+		display: none;
+	}
+	.header_cont {
+		display: block;
+		float: right;
+		width: 60%;
+		padding-right: 20px;
+		background: none;
+		margin-top: 8px;
+	}
+	.closePop {display: none;}
+	.util { /*메뉴상단 소메뉴를 Util 이라고 이름 지음*/
+		padding: 0px;
+		text-align: right;
+		padding-top: 10px;
+	}
+	.util li {
+		float: none;
+		display: inline;
+	}
+	.util li::after{
+		color: #fff;
+	}
+	.util li a {
+		font-size: 14px;
+	}
+	.gnb { /* 대메뉴 1차메뉴 */
+		float: right;
+		padding-top: 5px;
+		height: inherit;
+		border-top: none;
+	}
+	.gnb li { 
+		width: auto;
+		text-align: inherit;
+		box-sizing: inherit;
+		border-bottom: none;
+	}	
+	.gnb li:nth-child(2n+1){
+		border : none;
+	}
+	.gnb li a {
+		padding: 26px 25px;
+		font-size: 18px;
+		height: inherit;
+		line-height: inherit;
+		background: none;
+	}
+	.gnb li + li a{
+		background: none;
+	}
+	.gnb li + li +li a{
+		background: none;
+	}
+	.gnb li:last-child a {
+		padding-right: 0px;
+	}}
+/* 상단 로고와메뉴 스타일 */
