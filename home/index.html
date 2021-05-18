@@ -15,29 +15,20 @@ chrome, IE, Edge, Safari, Fire Fox 에서 H1, p, ul, div 등 태그들의 크기
 
 <link rel="stylesheet" href="/home/css/reset.css">
 <!-- 사용자 정의형 스타일 + 스크립트 추가 -->
-<script src='/home/js/main.js'></script>
+
 <link rel="stylesheet" href="/home/css/mobile.css">
 <!-- 태블릿용 CSS 임포트 -->
 <link rel="stylesheet" href="/home/css/tablet.css">
+<!-- pc용 CSS 임포트 -->
+<script src='/home/js/main.js'></script>
 <!-- 메인 슬라이드 코어 임포트 -->
 
 <script src="/home/js/slideMain.js"></script>
 <style>
-	@media all and (min-width:801px) {
-		/* 컨테이너 영역 */
-		#container {
-			padding-bottom: 20px;
-			width: auto;
-			position: inherit; /*부모 영역 상속*/
-		}
-		/* //컨테이너 영역 끝 */
-		/* 슬라이드 영역 */
-		/* //슬라이드 영역 */
-		/* 최신 갤러리 */
-		/* //최신 갤러리 끝 */
+@media all and (min-width:801px) {
 
 }
-</style>
+	</style>
 <script>
 //여기서 부터 실행. 메인페이지 슬라이드 호출 부문
 $(document).ready(function(){
@@ -62,8 +53,8 @@ var slidePlayHide = setTimeout(function(){
             $(".rollstop").css('display','inline-block');
             if(slideAuto) {clearTimeout(slideAuto);}
             play_w(index); // 위치는 현재 선택한 index부터 위치는 현재 선택한 index부터
-});
-});
+		});
+	});
 });
 </script>
 </head>
@@ -246,7 +237,5 @@ var slidePlayHide = setTimeout(function(){
 <div class="quick_area">
 	<p class="to_top"><a href="#wrap" class="s_point">TOP</a></p>
 </div>
-<!-- //하단 퀵메뉴 영역 -->
-
-</body>
+<!-- //하단 퀵메뉴 영역 --></body>
 </html>
