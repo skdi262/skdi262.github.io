@@ -15,8 +15,8 @@ function play_w(directw) { // 좌우로 슬라이드 되는 함수 선언
     // else {
     // 	slideNum = directw; //string으로 형태 변환
     //li 태그에서 클래스 seq인 것3개를 each함수로 반복(3번)
-    $(".rollingbtn").find('li.seq a').each(function(){
-    $('li.seq a img').attr('src',$('li.seq a img').attr('src').replace('_on.png','_off.png'));
+$(".rollingbtn").find('li.seq a').each(function(){
+$('.rollingbtn li.seq a img').attr('src',$('.rollingbtn li.seq a img').attr('src').replace('_on.png','_off.png'));
 });
 // 현재 선택된 슬라이드 이미지만 on.png로 바꿈
 //Css 는 계층형이라 a img 처럼 앞에 한칸 띄워야 계층 인식
@@ -41,5 +41,5 @@ else if(slideNum == 2){
 // 플래그 true일 때 자동 슬라이드, false일때 슬라이드 멈춤
 if(slideAuto) {
     clearTimeout(slideAuto);//play W 라는 함수를 실행 중지함
-    slideAuto = setTimeout('play_w("right")' ,3000);} //3초(3000ms)단위로 play_w라는 함수를 실행해라 
-}//위에서 함수 | 변수 사용
+    slideAuto = setTimeout("play_w('right')" ,3000);} //3초(3000ms)단위로 play_w라는 함수를 실행해라 
+}//위에서 함수 | 변수 사용slideAuto = setTimeout('play_w("right")' ,3000); //3초 후에 play_w라는 함수 실행
