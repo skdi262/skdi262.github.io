@@ -1,3 +1,33 @@
 @charset "UTF-8";
 @media all and (min-width:1066px){
-}
+	.header_area h1 {
+		padding-left: 0px;
+	}
+	.header.cont {
+		width: 769px;
+		padding-right: 10px;
+	}
+	.gnb li a {
+		padding: 26px 40px;
+	}
+	.gnb_depth { 
+		position: absolute;
+		left: 0px;
+		top: 113px;
+		width: 100%;
+		background: rgba(117, 94, 179, 0.35);
+		z-index: 100;
+	}
+	.gnb_depth2_1 .submenu_list {
+		padding-left: 750px;
+	}
+	.gnb_depth2_2 .submenu_list {
+		padding-left: 800px;
+		/* display: none; */
+	}
+	.submenu_list {
+		box-sizing: border-box;
+		width: 1050px;  /* 원래는 1065지만 디자인 꺠질까봐 1050으로 낮춰서 설정*/
+		text-align: left;
+		margin: 0px auto;
+	}	}

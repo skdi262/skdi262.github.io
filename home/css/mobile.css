@@ -141,11 +141,11 @@ header {
     display: none;
 }
 .gnb {
-    float: none;
-    box-sizing: border-box;
-    padding-top: 0px;
-    height: auto;
-    border-top: 1px solid #83868b;
+	float: none;
+	box-sizing: border-box;
+	padding-top: 0px;
+	height: auto;
+	border-top:1px solid #83868b;
 }
 .gnb li {
 	float: left;
@@ -164,7 +164,7 @@ header {
 }
 .gnb_depth {
 	/* 2차(서브)메뉴 */
-	display: none;
+	display: none; 
 }
 .gnb li + li a { /* 1차(대메뉴) li 태그중 2번째영역 */
 	background-image: url(../img/ico_gnb02.png);	
@@ -326,10 +326,10 @@ li.imglist2 {
     font-weight: bold;
     font-size: 19px;
 }
-.bbs_line .noice_recent {
+.bbs_line .notice_recent {
     padding-top: 10px;
 }
-.bbs_line .noice_recent li {
+.bbs_line .notice_recent li {
     padding: 8px 0px;
 }
 /* // 공지사항 최근 게시물 영역 */
@@ -337,23 +337,23 @@ li.imglist2 {
 /* 푸터 스타일 */
 footer {
 	border-top: 1px solid #ddd;
-    text-align: left;
+	text-align: left;
 }
-.foot area { /* 일단 모바일에서는 적용 안 됨, pc, 태블릿은 될 듯*/
+.foot_area { /* 모바일에서는 의미없고, 테블릿이상에서 의미있는 스타일 */
 	box-sizing: border-box;
-	padding: 0 20px 90px;
-	position: relative;/* relative로 해주는 건 태그의 기준으로 하는 위치이기 때문!*/
+	padding: 0px 20px 90px;
+	position: relative;/* relative가 있다는 것은 foot_area안쪽에 태그의 기준으로 사용하다는 의미 */
 }
 .foot_list {
 	padding-top: 25px;
 }
 .foot_list li {
-	float: left;
+	float: left;/* 세로배치 콘텐츠를 가로로 배치할때 사용 */
 }
 .foot_list li:first-child::after {
 	content: '|';
 	display: inline-block;
-	padding: 0 10px;
+	padding: 0px 10px;
 	font-size: 10px;
 	position: relative;
 	top: -2px;
@@ -362,51 +362,51 @@ footer {
 	font-weight: bold;
 	font-size: 15px;
 }
-.foot_list li a:hover {
-	color: black !important;
-}
+.foot_list li a:hover {color: black !important;}
 .foot_area h2 {
 	padding-top: 15px;
-	font-size: 14px; /* px : 픽셀, em, Rem*/
+	font-size: 14px;/* px:픽셀pixel html크기 단위,기타단위: em, rem(root em) */
 	color: #666;
 }
-.addr { /*adderss의 약자*/
-	line-height: 1.3 ; /* 기존의 13배 */
+.addr {
+	line-height: 1.3;/* 줄간격 1.3배 */
 	font-size: 14px;
 	color: #767676;
 	padding-top: 5px;
 }
-.br_line {display: block;}
+.br_line {
+	display: block;/* 블럭영역은 1줄모두 자리차지==엔터==줄바꿈 */
+}
 .copy {
-	padding : 3px 0 20px;
+	padding: 3px 0px 20px;
 	font-size: 14px;
 	color: #767676;
 }
 .snslink {
-	position: static;/* static은 고정값, relative는 다른 태그 기준으로 상대값 이게 기본이긴함*/
+	position: static;/* 다른태그를 기준으로 static고정값,relative상대값 */
 	width: 210px;
-	margin: 10px auto; /* auto는 가운데 정렬*/
+	margin: 10px auto;/* 10상하여백, auto 좌우=가운데정렬  */
 }
 .snslink li:first-child {
 	margin-left: 0px;
 }
-.snslink a {
-	margin-left: 15px;
-	float: left;
+.snslink li {
+	margin-left: 30px;
+	float: left;/* 리스트li태그의 세로배치를 가로배치로 변경할때 사용 */
 }
 .snslink li a {
 	display: block;
 	width: 50px;
 	height: 74px;
-	text-indent: -9999px;
+	text-indent: -9999px;/* 들여쓰기, 글자를 숨기기: 웹접근성(시각장애인용구현) */
+	background: url(../img/ico_blog_r.png) no-repeat;
 	overflow: hidden;
-	background: url(/home/img/ico_blog_r.png) no-repeat ;
 }
-.snslink li + li a {
-	background-image: url(/home/img/ico_instargram_r.png) ;
+.snslink li + li a {/* 인접(형제)연산자+ == sibling(시블링) */
+	background-image: url(../img/ico_facebook_r.png);
 }
 .snslink li + li + li a {
-	background-image: url(/home/img/ico_facebook_r.png);
+	background-image: url(../img/ico_instargram_r.png);
 }
 /* //푸터스타일 끝 */
 /* 퀵메뉴 영역 */
