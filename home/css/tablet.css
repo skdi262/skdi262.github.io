@@ -235,6 +235,7 @@ ul.viewImgList li {
 		line-height: 1.4;
 	}
 	.br_line {
+		
 		display: inherit; /* 모바일에서 지정했던 영역을 해제하고 다시 적용하겠다는 의미*/
 	}
 	.snslink {
