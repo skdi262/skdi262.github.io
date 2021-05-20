@@ -2,11 +2,21 @@
 - UI (VS Code)진행,
 - 자바(spring)|이클립스-egov전자정부 프레임워크 개발환경
 - 오라클 DB(SQL 디벨럽퍼 개발환경), Ansi-SQL(표준SQL) 기본 언어 실습 CRUD
-- 2달 째 부터(백엔드) Spring 으로 실습진행(포트폴리오용)
+- 2달 째 부터(백엔드) Spring 으로 h실습진행(포트폴리오용)
+- 톰캣 : 이클립스에서 웹 프로그램 결과를 확인하는 live server(localhost:8080)
+- 라이브서버 (아파치) : VS code에서 HTML 결과를 확인하는 라이브서버 (localhost : 5500)
+- JRE : java runtime enviroment - 실행할때만 사용.
+- JDK 설치 : 개발, 실행할때
 
+#### 20210521(금)
+- 모바일 게시판 CRUD CSS 처리 : Create(Update) = board_write.html
+- 반응형 서브페이지들 ( 로그인, 회원가입, 마이페이지)
 #### 20210520(목)
 - 메뉴처리
-- 모바일 게시판 CRUD CSS 처리
+- 모바일 게시판 CRUD CSS 처리 : READ (list, view페이지)
+- Read - 리스트형식 (다중Map): board_list.html ex) 회원 리스트
+- Read - 단일 Map 형식 , json형식(key1: value,ke2:value, key3,value3 .
+- 상세보기 페이지 댓글 디자인은 부트스트랩 디자인 시 추가할 예정
 - 모바일 서브페이지 css 스타일 처리
 - 정적 콘텐츠 : html,cssjs
 - 동적 콘텐츠 : jsp,py,PHP,C#,Nodejs
