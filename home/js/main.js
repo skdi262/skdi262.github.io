@@ -13,3 +13,65 @@ $(document).ready(function() {
 		$('#header').removeClass('on');
 	});
 });
+// PC용 대메뉴 마우스 롤아웃 이벤트 처리 부분
+var isOver1 = false; //false 일 때 서브메뉴가 사라짐.
+var isOverSub1 = false; //서브메뉴 1번이 false 일 때 서브메뉴가 사라지는 조건
+// 1번 서브메뉴 숨기기
+function goHide1() {
+	if(!isOver1 && !isOverSub1) {
+		$('.gnb_depth2_1').stop().fadeOut('fast');
+	};
+}
+var isOver2 = false; //false 일 때 서브메뉴가 사라짐.
+var isOverSub2 =false; //서브메뉴 1번이 false 일 때 서브메뉴가 사라지는 조건
+// 2번 서브메뉴 숨기기
+function goHide2() {
+	if(!isOver2 && !isOverSub2) {
+		$('.gnb_depth2_2').stop().fadeOut('fast');
+	}
+}
+//pc용 서브메뉴가 나타나는 기능 만들기
+$(document).ready(function(){
+	//대메뉴 1번 액션
+	$('.openAll1').mouseover(function(){
+		if( parseInt($('header').css('width')) >=1049 ){
+			$('.gnb_depth2_1').stop().fadeIn('fast');
+		}
+		isOver1 = true; //false 일 때 숨기니까 
+	});
+	$('.openAll1').mouseout(function(){
+		isOver1 = false;
+		setTimeout('goHide1()', 200); //기본은 goHide1() 만하면 되는데, mouse 아웃 이벤트를 놓칠까봐 0.2초 셋타임아웃 넣어줌
+	});
+	//서브메뉴 1 액션
+	$('.gnb_depth2_1').mouseover(function(){
+		isOverSub1 = true;
+	});
+	$('.gnb_depth2_1').mouseout(function(){
+		isOverSub1 = false;
+		setTimeout('goHide1()', 200);
+	});
+	// 대메뉴 2번 액션
+	$('.openAll2').mouseover(function(){
+		$('.openAll2').mouseover(function(){
+		if( parseInt($('header').css('width')) >=1049 ){
+			$('.gnb_depth2_2').stop().fadeIn('fast');
+		}
+		isOver1 = true; //false 일 때 숨기니까 
+	});
+	});
+	$('.openAll2').mouseout(function(){
+		$('.openAll2').mouseout(function(){
+		isOver1 = false;
+		setTimeout('goHide1()', 200); //기본은 goHide1() 만하면 되는데, mouse 아웃 이벤트를 놓칠까봐 0.2초 셋타임아웃 넣어줌
+	});
+	});
+	//서브메뉴 2 액션
+	$('.gnb_depth2_2').mouseover(function(){
+		isOverSub2 = true;
+	});
+	$('.gnb_depth2_2').mouseout(function(){
+		isOverSub2 = false;
+		setTimeout('goHide2()', 200);
+	});	
+});
