@@ -5,127 +5,108 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 <meta charset="utf-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<!-- 제이쿼리 코어 임포트 -->
-<script src='/home/js/jquery-3.6.0.js'></script>
-<!-- 상단 바로가기 링크 시 부드럽게 상단으로 이동하는 JS 임포트 -->
-<script src="/home/js/jquery.smooth-scroll.min.js"></script>
-<!-- 화면을 reset시키는 style을 임포트 : cross 브라우징을 처리하기 위해서
-chrome, IE, Edge, Safari, Fire Fox 에서 H1, p, ul, div 등 태그들의 크기가 조금씩 다 틀림
-그래서 초기화 시켜줘야됨, 모든 브라우저에서 똑같이 보이게 위한 절차 reset.css-->
-<link rel="stylesheet" href="/home/css/reset.css">
-<!-- 사용자 정의형 스타일 + 스크립트 추가 -->
-<link rel="stylesheet" href="/home/css/mobile.css">
-<!-- 태블릿용 CSS 임포트 -->
-<link rel="stylesheet" href="/home/css/tablet.css">
-<!-- pc용 CSS 임포트 -->
-<link rel="stylesheet" href="/home/css/pc.css">
-<!-- 게시판 CSS 임포트 -->
-<link rel="stylesheet" href="/home/css/board.css">
-<script src='/home/js/main.js'></script>
-<!-- 메인 슬라이드 코어 임포트 -->
-<script src="/home/js/slideMain.js"></script>
-<!-- 부트스트랩 CSS 코어 임포트 -->
+<link rel="stylesheet" href="css/reset.css">
+<link rel="stylesheet" href="css/mobile.css">
+<link rel="stylesheet" href="css/tablet.css">
+<link rel="stylesheet" href="css/pc.css">
+<link rel="stylesheet" href="css/board.css">
+<script src="js/jquery-3.6.0.min.js"></script>
+<script src="js/jquery.smooth-scroll.min.js"></script>
+<script src="js/main.js"></script>
+<!-- Font Awesome -->
+<link rel="stylesheet" href="/admin/plugins/fontawesome-free/css/all.min.css">
+<!-- Bootstrap 4 -->
 <link rel="stylesheet" href="/admin/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
-<!-- 부트스트랩 JS코어 임포트 -->
 <script src="/admin/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- adminLTE 전용 CSS 임포트 -->
-<link rel="stylesheet" href="/admin/dist/css/adminlte.min.css">
-<!-- 첨부파일명을 input 태그 디자인 안 쪽에 집어넣는 확장 프로그램 -->
-<script src="/admin/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
-<!-- 위에 집어넣은 첨부파일 확장프로그램 실행 -->
+<!-- AdminLte -->
+<link rel="stylesheet" href="/admin/dist/css/adminlte.min.css">	
+<!-- summernote -->
+<link rel="stylesheet" href="../admin/plugins/summernote/summernote-bs4.min.css">
+<!-- write.html은 섬머노트 웹에디터 부분 추가(아래) -->
+<link rel="stylesheet" href="../admin/plugins/summernote/summernote.css">
+<script src="../admin/plugins/summernote/summernote.js"></script>
+<script>
+		$(document).ready(function () {
+		  bsCustomFileInput.init();
+		});
+</script>
 <script>
 	$(document).ready(function(){
-		bsCustomFileInput.init();
-	})
+		$('#content_lbl').summernote({
+			height:150,
+			lang:"ko-KR",
+			placeholder:'글 내용을 입력해 주세요',
+			toolbar: [
+						['fontname', ['fontname']],
+						['fontsize', ['fontsize']],
+						['style', ['bold', 'italic', 'underline','strikethrough', 'clear']],
+						['color', ['forecolor','color']],
+						['table', ['table']],
+						['para', ['ul', 'ol', 'paragraph']],
+						['height', ['height']],
+						['insert',['link','video']],//'picture',
+						['view', ['fullscreen', 'help']]
+					],
+			fontNames: ['Arial', 'Arial Black', 'Comic Sans MS', 'Courier New','맑은 고딕','궁서','굴림체','굴림','돋음체','바탕체','Nanum Gothic'],
+			fontSizes: ['8','9','10','11','12','14','16','18','20','22','24','28','30','36','50','72'],
+			fontNamesIgnoreCheck:['Nanum Gothic']
+		});
+	});//textarea 중 content아이디영역을 섬머노트에디터로 변경처리 함수실행
 </script>
-<!-- 서머노트 웹 에디터 CSS 임포트 -->
-<link rel="stylesheet" href="/admin/plugins/summernote/summernote-bs4.min.css">
-<link rel="stylesheet" href="/admin/plugins/summernote/summernote.css">
-<script src="/admin/plugins/summernote/summernote.min.js"></script>
-<!-- 서머노트 웹 에디터 실행 -->
 <script>
-	$(document).ready(function(){
-	// 	$('#content_lbl').summernote();
-	// }) 기본실행을 개발자 커스터마이징 합니다.
-	$('#content_lbl').summernote({
-		height :150,
-		lang:'ko-KR',
-		placeholder : '글 내용을 입력해주세요',
-		fontNames : ['Arial','Arail Black','Nanum Gothic','궁서']
-	});
-	});
+$(document).ready(function() {	
+});
 </script>
-<style>
-/* 모바일용 게시판 스타일 */
-@media all and (min-width:801px) {
-}
-/* PC용 메인 페이지 스타일 지정 */
-@media all and (min-width:1066px){
-}
-	</style><style>
-</style>
-<script>
-    
-    //여기서 부터 실행. 메인페이지 슬라이드 호출 부문
-    $(document).ready(function(){
-        
-    });
-    </script>
-    </head>
-    <body>
-    <!-- 헤더에서 푸터까지 -->
-    <div id="wrap">
-        <!-- 헤더 상단메뉴 영역 -->
-        <header id="header">
-            <div class="header_area box_inner clear">
-                <!-- 상단로고영역 -->
-                <h1><a href="index.html">스프링 in 자바</a></h1>
-                <!-- //상단로고영역 -->
-                
-                <!-- 상단메뉴메뉴영역 -->
-                <p class="openMOgnb">
-                    <a href="#">
-                    <b class="hdd">메뉴열기</b>
-                     <span></span><span></span><span></span>
-                    </a>
-                </p>
-                <div class="header_cont">
-                    <ul class="util clear">
-                        <li><a href="login.html">로그인</a></li>
-                        <li><a href="join.html">회원가입</a></li>
-                        <!-- 로그인 후 보이는 메뉴(아래) -->
-                        <li><a href="#">OOO님 환영합니다.</a></li>
-                        <li><a href="mypage.html">마이페이지</a></li>
-                        <li><a href="../admin/home.html">AdminLTE</a></li>
-                    </ul>	
-                    <nav>
-                    <ul class="gnb clear">
-                        <li><a href="board_list.html" class="openAll1">샘플홈페이지</a>
-    
-                            <div class="gnb_depth gnb_depth2_1">
-                                <ul class="submenu_list">
-                                    <li><a href="board_list.html">반응형홈페이지</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li><a href="board_list.html" class="openAll2">커뮤니티</a>
-                            <div class="gnb_depth gnb_depth2_2">
-                                <ul class="submenu_list">
-                                    <li><a href="board_list.html">공지사항</a></li>
-                                    <li><a href="board_list.html">겔러리게시판</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
-                    </nav>
-                    <p class="closePop"><a href="javascript:;">닫기</a></p>
-                </div>
-                <!-- //상단메뉴메뉴영역 -->
-            </div>
-        </header>
-        <!-- //헤더 상단메뉴 영역 -->
-        
-        <!-- 메인 콘텐츠 영역 -->
+</head>
+<body>
+<!-- 헤더에서푸터까지 -->
+<div id="wrap">
+	<!-- 헤더상단메뉴영역영역 -->
+	<header id="header">
+		<div class="header_area box_inner clear">
+			<!-- 상단로고영역 -->
+			<h1><a href="index.html">스프링 in 자바</a></h1>
+			<!-- //상단로고영역 -->
+			
+			<!-- 상단메뉴메뉴영역 -->
+			<p class="openMOgnb"><a href="#"><b class="hdd">메뉴열기</b> <span></span><span></span><span></span></a></p>
+			<div class="header_cont">
+				<ul class="util clear">
+					<li><a href="login.html">로그인</a></li>
+					<li><a href="join.html">회원가입</a></li>
+					<!-- 로그인 후 보이는 메뉴(아래) -->
+					<li><a href="#">OOO님 환영합니다.</a></li>
+					<li><a href="mypage.html">마이페이지</a></li>
+					<li><a href="../admin/home.html">AdminLTE</a></li>
+				</ul>	
+				<nav>
+				<ul class="gnb clear">
+					<li><a href="board_list.html" class="openAll1">샘플홈페이지</a>
+
+                        <div class="gnb_depth gnb_depth2_1">
+                            <ul class="submenu_list">
+                                <li><a href="board_list.html">반응형홈페이지</a></li>
+                            </ul>
+                        </div>
+					</li>
+					<li><a href="board_list.html" class="openAll2">커뮤니티</a>
+				        <div class="gnb_depth gnb_depth2_2">
+                            <ul class="submenu_list">
+                                <li><a href="board_list.html">공지사항</a></li>
+                                <li><a href="board_list.html">겔러리게시판</a></li>
+                            </ul>
+                        </div>
+					</li>
+				</ul>
+                </nav>
+				<p class="closePop"><a href="javascript:;">닫기</a></p>
+			</div>
+			<!-- //상단메뉴메뉴영역 -->
+		</div>
+	</header>
+	<!-- //헤더상단메뉴영역영역 -->
+	
+	<!-- 메인콘텐츠영역 -->
 	<div id="container">
 		<!-- 메인상단위치표시영역 -->
 		<div class="location_area customer">
@@ -168,11 +149,12 @@ chrome, IE, Edge, Safari, Fire Fox 에서 H1, p, ul, div 등 태그들의 크기
 								<label class="custom-file-label" for="customFile" style="color:#999;">파일첨부0</label>
 							</div>
 							<div style="height:10px;"></div>
+		                    
+		                    	<div class="custom-file" style="width:96%;margin:0 2%;">
+				                    <input type="file" name="file" class="custom-file-input" id="customFile_1">
+				                    <label class="custom-file-label" for="customFile" style="color:#999;">파일첨부1</label>
+				                </div>
 				            <div style="height:10px;"></div>
-							<div class="custom-file" style="width: 96%; margin: 0 2%;">
-								<input type="file" class="custom-file-input" id="customFile">
-								<label class="custom-file-label" for="customFile" style="color: #999;">파일첨부1</label>
-							  </div>
 		                </li>
 					</ul>
 					<p class="btn_line">
@@ -186,9 +168,18 @@ chrome, IE, Edge, Safari, Fire Fox 에서 H1, p, ul, div 등 태그들의 크기
 		<!-- //메인본문영역 -->
 	</div>
 	<!-- //메이콘텐츠영역 -->
+	
+	<!-- 첨부파일 부트스트랩 디자인 JS -->
+	<script src="../admin/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+	<!-- 첨부파일 선택한 내용 출력 실행 -->
 
-        <!-- //메이콘텐츠영역 -->
-                	<!-- 푸터 메뉴 및 사업자 정보 영역 -->
+	<style>
+	.note-editor.note-frame.fullscreen{background:white;}
+	.note-editor {
+		font-family: 'Nanum Gothic';
+	}
+	</style>
+	<!-- 푸터메뉴및사업자정보영역 -->
 	<footer>
 		<div class="foot_area box_inner">
 			<ul class="foot_list clear">
@@ -209,13 +200,15 @@ chrome, IE, Edge, Safari, Fire Fox 에서 H1, p, ul, div 등 태그들의 크기
 			</ul>
 		</div>
 	</footer>
-	<!-- //푸터 메뉴 및 주소 영역 -->
+	<!-- //푸터메뉴및주소영역 -->
 </div>
-<!-- //헤더에서 푸터까지 -->
+<!-- //헤더에서푸터까지 -->
 
-<!-- 하단 퀵메뉴 영역 -->
+<!-- 하단퀵메뉴영역 -->
 <div class="quick_area">
 	<p class="to_top"><a href="#wrap" class="s_point">TOP</a></p>
 </div>
-<!-- //하단 퀵메뉴 영역 --></body>
+<!-- //하단퀵메뉴영역 -->
+
+</body>
 </html>
