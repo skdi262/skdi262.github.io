@@ -1,4 +1,9 @@
 @charset "UTF-8";
+.btn_bbs {
+    width: 70px;
+    float: none;
+    text-align: center;
+}
 /* 게시판 공통영역 bbs(bulletin board system) */
 .bbsListTbl a:hover, .pagination a:hover, .bbs_title a:hover, .tit_lbl a:hover {
     color: #000 !important;
@@ -83,6 +88,7 @@ input::placeholder { color: #999; } /* IE(Internet Explore)브라우저용 스�
 .bbsListTbl {
     width: 100%;
     border-top: 2px solid #384d75;
+
 }
 .bbsListTbl th:nth-child(1) { display: none; } /* 모바일에서는 가로를 단순하게 처리하는 용도 */
 .bbsListTbl th:nth-child(2) { width: 70%; } /* 모바일전용 */
