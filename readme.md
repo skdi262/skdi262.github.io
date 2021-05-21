@@ -12,6 +12,8 @@
 - 모바일 게시판 CRUD CSS 처리 : Create(Update) = board_write.html
 - 글쓰기 폼(부트스트랩 적용) : 첨부파일부분, 내용입력부분 웹 에디터 추가
 - 부트스트랩 : jQurey 기반 UI 탬플릿 (프레임워크)
+- AdminLTE : dist(디스트립트) pages(더미데이터), plugins(서머노트 등등)
+- index.html, index2.html, intdex3.html : 대시보드 파일
 - 반응형 서브페이지들 ( 로그인, 회원가입, 마이페이지)
 #### 20210520(목)
 - 메뉴처리

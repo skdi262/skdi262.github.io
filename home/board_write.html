@@ -24,6 +24,37 @@ chrome, IE, Edge, Safari, Fire Fox 에서 H1, p, ul, div 등 태그들의 크기
 <script src='/home/js/main.js'></script>
 <!-- 메인 슬라이드 코어 임포트 -->
 <script src="/home/js/slideMain.js"></script>
+<!-- 부트스트랩 CSS 코어 임포트 -->
+<link rel="stylesheet" href="/admin/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+<!-- 부트스트랩 JS코어 임포트 -->
+<script src="/admin/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- adminLTE 전용 CSS 임포트 -->
+<link rel="stylesheet" href="/admin/dist/css/adminlte.min.css">
+<!-- 첨부파일명을 input 태그 디자인 안 쪽에 집어넣는 확장 프로그램 -->
+<script src="/admin/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+<!-- 위에 집어넣은 첨부파일 확장프로그램 실행 -->
+<script>
+	$(document).ready(function(){
+		bsCustomFileInput.init();
+	})
+</script>
+<!-- 서머노트 웹 에디터 CSS 임포트 -->
+<link rel="stylesheet" href="/admin/plugins/summernote/summernote-bs4.min.css">
+<link rel="stylesheet" href="/admin/plugins/summernote/summernote.css">
+<script src="/admin/plugins/summernote/summernote.min.js"></script>
+<!-- 서머노트 웹 에디터 실행 -->
+<script>
+	$(document).ready(function(){
+	// 	$('#content_lbl').summernote();
+	// }) 기본실행을 개발자 커스터마이징 합니다.
+	$('#content_lbl').summernote({
+		height :150,
+		lang:'ko-KR',
+		placeholder : '글 내용을 입력해주세요',
+		fontNames : ['Arial','Arail Black','Nanum Gothic','궁서']
+	});
+	});
+</script>
 <style>
 /* 모바일용 게시판 스타일 */
 @media all and (min-width:801px) {
@@ -137,12 +168,11 @@ chrome, IE, Edge, Safari, Fire Fox 에서 H1, p, ul, div 등 태그들의 크기
 								<label class="custom-file-label" for="customFile" style="color:#999;">파일첨부0</label>
 							</div>
 							<div style="height:10px;"></div>
-		                    
-		                    	<div class="custom-file" style="width:96%;margin:0 2%;">
-				                    <input type="file" name="file" class="custom-file-input" id="customFile_1">
-				                    <label class="custom-file-label" for="customFile" style="color:#999;">파일첨부1</label>
-				                </div>
 				            <div style="height:10px;"></div>
+							<div class="custom-file" style="width: 96%; margin: 0 2%;">
+								<input type="file" class="custom-file-input" id="customFile">
+								<label class="custom-file-label" for="customFile" style="color: #999;">파일첨부1</label>
+							  </div>
 		                </li>
 					</ul>
 					<p class="btn_line">
