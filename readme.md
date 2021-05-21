@@ -14,7 +14,14 @@
 - 부트스트랩 : jQurey 기반 UI 탬플릿 (프레임워크)
 - AdminLTE : dist(디스트립트) pages(더미데이터), plugins(서머노트 등등)
 - index.html, index2.html, intdex3.html : 대시보드 파일
+- board_view.html 댓글 UI 디자인 (부트스트랩) 추가 예정
 - 반응형 서브페이지들 ( 로그인, 회원가입, 마이페이지)
+- 관리자단 AdminLTE 적용 (회원관리, CURD, 게시판 CURD, Dashboard)
+- 이클립스 실습 1. 다이나믹 웹 프로젝트(jsp 만드는 방식) 만든 후 UI적용 후 실행 
+- 스프링 웹 프로젝트 만들 예정 헬로월드 1개 , 2달간 이거할 꺼임
+- 위 스프링 플젝트에서 자바 기초 할 꺼임 -> 이걸로 UI 만든거 적용 예정
+
+
 #### 20210520(목)
 - 메뉴처리
 - 모바일 게시판 CRUD CSS 처리 : READ (list, view페이지)
