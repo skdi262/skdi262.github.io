@@ -235,7 +235,7 @@ $(document).ready(function() {
 			<!-- 페이징 처리 -->
 			<div class="row">
 				<ul class="pagination" style="margin: 0 auto;">
-					<li class="paginate_button page-item previous disabled" id="example2_previous">
+					<!-- <li class="paginate_button page-item previous disabled" id="example2_previous">
 						<a href="#" aria-controls="example2" data-dt-idx="0" tabindex="0" class="page-link">Previous</a>
 					</li>
 					<li class="paginate_button page-item active">
@@ -258,7 +258,7 @@ $(document).ready(function() {
 					</li>
 					<li class="paginate_button page-item next" id="example2_next">
 						<a href="#" aria-controls="example2" data-dt-idx="7" tabindex="0" class="page-link">Next</a>
-					</li>
+					</li> -->
 				</ul>
 			</div>
 		  	<!-- //페이징 처리 -->
@@ -330,11 +330,37 @@ $(document).ready(function() {
 </div>
 <!-- /.modal -->
 <script>
+// 페이징 처리 함수형 변수
+var printPagingList = function(pageVO, target){
+	$(target).html(''); // 본인의 내용만 지우고 taraget은 살아있뜸
+//pageVO = 스프링에서 받는 json 데이터, 변수 3개 pageVO.prev(이전 데이터가 있다면 true), pageVO.next(이후 데이터가 있다면 ture), pageVO=5페이로 가정
+var pagination = ''; // 문자열 누적변수
+//previous 출력
+pagination += '<li class="paginate_button page-item previous disabled" id="example2_previous">';
+pagination += '<a href="#" aria-controls="example2" data-dt-idx="0" tabindex="0" class="page-link">Previous</a>';
+pagination += '</li>'; //pagination = pagination + </li>;
+var active = '';
+for (var i=0; i<pageVO; i++) {
+	if(i==0){active = 'active';}
+	else {active = '';}
+pagination += '<li class="paginate_button page-item '+active+'">';
+pagination += '<a href="#" aria-controls="example2" data-dt-idx="6" tabindex="0" class="page-link">'+(1+i)+'</a>'
+pagination += '</li>';
+}
+//next 출력
+pagination += '<li class="paginate_button page-item next" id="example2_next">';
+pagination += '<a href="#" aria-controls="example2" data-dt-idx="7" tabindex="0" class="page-link">Next</a>';
+pagination += '</li>';
+$(target).append(pagination);
+};
+
+// 댓글리스트 처리 함수
 var printReplyList = function(data, templateData, target) {
 	var template = Handlebars.compile(templateData.html());//템플릿을 태그로 변환
 	var html = template(data);//파싱처리
-	$('.div_template').remove();//기존 댓글데이터 누적을 방지
+	$('.div_template').remove();//기존 댓글데이터 누적을 방지 target 안쪽의 자식데이터를 지움... 
 	target.prepend(html);
+	
 };
 	$(document).ready(function(){
 		$('#btn_reply_list').click(function(){
@@ -353,7 +379,9 @@ var printReplyList = function(data, templateData, target) {
 					//함수의(인자=아규먼트=매개변수=파라미터)
 					//printReplyList(jsonDate, 바인딩(파싱)위치, 화면출력위치);
 					printReplyList(result, $('#template'), $('#collapseReply'));
+					printPagingList(5, '.pagination');
 				},
+				
 				error:function() {
 					alert('RestAPI서버가 작동하지 않습니다.');
 				}
@@ -377,6 +405,7 @@ var printReplyList = function(data, templateData, target) {
 					//함수의(인자=아규먼트=매개변수=파라미터)
 					//printReplyList(jsonDate, 바인딩(파싱)위치, 화면출력위치);
 					printReplyList(result, $('#template'), $('#collapseReply'));
+					printPagingList(6, '.pagination');
 				},
 				error:function() {
 					alert('RestAPI서버가 작동하지 않습니다.');
