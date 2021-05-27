@@ -3,13 +3,15 @@
 - 자바(spring)|이클립스-egov전자정부 프레임워크 개발환경
 - 오라클 DB(SQL 디벨럽퍼 개발환경), Ansi-SQL(표준SQL) 기본 언어 실습 CRUD
 - 2달 째 부터(백엔드) Spring 으로 h실습진행(포트폴리오용)
-- 톰캣 : 이클립스에서 웹 프로그램 결과를 확인하는 live server(localhost:8080)
-- 라이브서버 (아파치) : VS code에서 HTML 결과를 확인하는 라이브서버 (localhost : 5500)
 - JRE : java runtime enviroment - 실행할때만 사용.
 - JDK 설치 : 개발, 실행할때
 
 #### 20210527(목)
+- board_list.html 시작
 - 관지라단 AdminLTE 적용(회원관리 CRUD, 게시판 CRUD, 대시보드)
+- 관리자단 AdminLTE 적용 - UI 할때 같이
+- 관리자단 기본 틀( 템플릿): 공통 UI부분 작업
+- Ctrl+k+0 코드 축소, Ctrl+K+J 코드 확대!
 
 #### 20210526(수)
 - 반응형 서브페이지들 ( 로그인, 회원가입, 마이페이지)
