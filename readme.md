@@ -6,6 +6,13 @@
 - JRE : java runtime enviroment - 실행할때만 사용.
 - JDK 설치 : 개발, 실행할때
 
+#### 20210528(금)
+- 관리자단 admin/board_write.html, board_view.html
+- 대시보드 home.html (회원가입 정보, 최근게시물 정보)
+- 이클립스로 작업한 html 내용을 -> resources 폴더(admin,home,root)로 배치
+
+
+
 #### 20210527(목)
 - board_list.html 시작
 - 관지라단 AdminLTE 적용(회원관리 CRUD, 게시판 CRUD, 대시보드)
