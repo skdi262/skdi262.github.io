@@ -173,20 +173,22 @@
     <div class="card-tools">
     <!-- 검색 폼 -->
     <!-- 검색 내용 셀렉 -->
-    <div class="input-group input-group-md">      
+    <div class="input-group input-group-md">  
       <form action="form_search" action="board_list.html" method="get"
-      class="form_horizontal">
-    <div class="input-group-append float-right"style="width: inherit;">
-      <button type="submit" class="btn btn-default">
-      <i class="fas fa-search"></i>
-      </button>    
-  </div>
-  <input type="text" name="table_search" class="form-control float-right" placeholder="Search" style="width: inherit;">
-  <select class="form-control float-right" style="width: inherit;">
-    <option>전체</option>
-    <option>내용</option>
-    <option>검색</option>            
-    </select>    
+      class="form_horizontal">    
+      <select class="form-control float-left" style="width: inherit;">
+        <option>전체</option>
+        <option>내용</option>
+        <option>검색</option>            
+        </select>        
+      
+  <input type="text" name="table_search" class="form-control float-left" placeholder="Search" style="width: inherit;">
+  <div class="input-group-append float-left"style="width: inherit;">
+    <button type="submit" class="btn btn-default">
+    <i class="fas fa-search"></i>
+    </button>    
+</div>
+  
 <!-- //검색 내용 셀렉 -->
 </form>
 </div>
