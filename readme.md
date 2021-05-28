@@ -7,6 +7,12 @@
 - JDK 설치 : 개발, 실행할때
 
 #### 20210528(금)
+- UI 트렌드 용어 : 카드 UI, badge, rebone
+- 소스 인스펙션(소스분석)
+- 데이터를 전송할 때 사용하는 문장 = 쿼리 스트링의 시작은 ?키=value&키=value
+- 뒤로가기 허용 시 게시물 테러가 가능.
+- 뒤로가기를 허용하지 않게 페이지를 이동하는 방식 ( Js에서는 . location.replace 함수 사용)
+- 뒤로가기를 허용하는 함수 (Js에서는 location.href = '' 이렇게 사용 )
 - 관리자단 admin/board_write.html, board_view.html
 - 대시보드 home.html (회원가입 정보, 최근게시물 정보)
 - 이클립스로 작업한 html 내용을 -> resources 폴더(admin,home,root)로 배치
