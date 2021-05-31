@@ -16,7 +16,7 @@
 - 관리자단 admin/board_write.html, board_view.html
 - 대시보드 home.html (회원가입 정보, 최근게시물 정보)
 - 이클립스로 작업한 html 내용을 -> resources 폴더(admin,home,root)로 배치
-
+DFDF
 
 
 #### 20210527(목)
