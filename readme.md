@@ -6,6 +6,8 @@
 - JRE : java runtime enviroment - 실행할때만 사용.
 - JDK 설치 : 개발, 실행할때
 
+#### 20210601(화)
+
 #### 20210528(금)
 - UI 트렌드 용어 : 카드 UI, badge, rebone
 - 소스 인스펙션(소스분석)
