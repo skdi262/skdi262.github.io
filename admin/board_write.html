@@ -168,41 +168,46 @@
           </div>
           <!-- /.card-header -->
           <!-- form start -->
-          <!-- 첨부파일을 전송할 때는 enctype= 필수 없으면, 첨부파일이 전송되지 않음 -->
-          <form name="form_wirte" action="board_write.html" enctype="multipart/form-data">
+          <!-- 첨부파일을 전송할때 enctype=필수 없으면, 첨부파일이 전송X -->
+          <form name="form_write" action="board_write.html" enctype="multipart/form-data">
             <div class="card-body">
               <div class="form-group">
-                <label for="board_type">게시판 타입</label>
+                <label for="board_type">게시판타입</label>
                 <select name="board_type" class="form-control">
                   <option>선택</option>
                   <option>공지사항</option>
-                  <option>갤러리</option>
+                  <option>겔러리</option>
                 </select>
               </div>
               <div class="form-group">
                 <label for="title">글제목</label>
-                <input name="title" type= "text" class="form-control" id="title" placeholder="제목을 입력해주세요." required>
+                <input name="title" type="text" class="form-control" id="title" placeholder="제목을 입력해 주세요" required>
               </div>
               <div class="form-group">
                 <label for="content">글내용</label>
-                  <textarea name="content" id="content" class="form-control" placeholder="내용을 입력해주세요." required></textarea>
+                <textarea name="content" id="content" class="form-control" placeholder="내용을 입력해주세요." required></textarea>
               </div>
               <div class="form-group">
                 <label for="writer">작성자</label>
-                <input name="writer" type= "text" class="form-control" id="writer" placeholder="작성자를 입력해주세요." required>
+                <input name="writer" type="text" class="form-control" id="writer" placeholder="작성자를 입력해 주세요" required>
               </div>
               <div class="form-group">
                 <label for="exampleInputFile">첨부파일</label>
                 <div class="input-group">
                   <div class="custom-file">
-                    <input name="file" class="custom-file-input" id="exampleInputFile">
-                    <label class="custom-file-label" for="exampleInputFile">파일 선택</label>
+                    <input name="file" type="file" class="custom-file-input" id="file0">
+                    <label class="custom-file-label" for="file0">파일선택</label>
                   </div>
-                  <div class="input-group-append">
-                    <span class="input-group-text">Upload</span>
+                </div>
+                <div class="mb-2"></div>
+                <div class="input-group">
+                  <div class="custom-file">
+                    <input name="file" type="file" class="custom-file-input" id="file1">
+                    <label class="custom-file-label" for="file1">파일선택</label>
                   </div>
                 </div>
               </div>
+              
             </div>
             <!-- /.card-body -->
 
@@ -254,43 +259,39 @@
 <!-- AdminLTE App AdminLTE코어 -->
 <script src="dist/js/adminlte.js"></script>
 <!-- AdminLTE for demo purposes 오른쪽메뉴-로그아웃사용 코어: 사용안함. -->
-	<!-- 첨부파일 부트스트랩 디자인 JS -->
-	<script src="/admin/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
-<script>
-  $(document).ready(function () {
-    bsCustomFileInput.init();
-  });
-</script>
 <!-- <script src="dist/js/demo.js"></script> -->
-<script src="../admin/plugins/summernote/summernote.js"></script>
-<script>
-		$(document).ready(function () {
-		  bsCustomFileInput.init();
-		});
-</script>
+<!-- 첨부파일명을 input태그디자인 안쪽에 집어넣는 확장프로그램 -->
+<script src="/admin/plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+<!-- 위 첨부파일 확장프로그램 실행(아래-개발자가 처리) -->
 <script>
 	$(document).ready(function(){
+		bsCustomFileInput.init();
+	});
+</script>
+<!-- 서머노트 웹에디터 실행(아래-개발자가 처리) -->
+<script>
+	$(document).ready(function(){
+		//$('#content_lbl').summernote();//기본실행. 이기본실을 개발자 커스터마이징 합니다.
 		$('#content').summernote({
 			height:150,
-			lang:"ko-KR",
+			lang:'ko-KR',
 			placeholder:'글 내용을 입력해 주세요',
 			toolbar: [
-						['fontname', ['fontname']],
-						['fontsize', ['fontsize']],
-						['style', ['bold', 'italic', 'underline','strikethrough', 'clear']],
-						['color', ['forecolor','color']],
-						['table', ['table']],
-						['para', ['ul', 'ol', 'paragraph']],
-						['height', ['height']],
-						['insert',['link','video']],//'picture',
-						['view', ['fullscreen', 'help']]
-					],
-			fontNames: ['Arial', 'Arial Black', 'Comic Sans MS', 'Courier New','맑은 고딕','궁서','굴림체','굴림','돋음체','바탕체','Nanum Gothic'],
-			fontSizes: ['8','9','10','11','12','14','16','18','20','22','24','28','30','36','50','72'],
-			fontNamesIgnoreCheck:['Nanum Gothic']
+				['fontname',['fontname']],
+				['fontsize',['fontsize']],
+				['style',['bold','italic','underline']],
+				['color',['forecolor','color']],
+				['table',['table']],
+				['para',['ul','ol','paragraph']],
+				['height',['height']],
+				['insert',['link','video']],//'picture',
+				['view',['fullscreen','help']]
+			],
+			fontNames: ['Arial','Arial Black','맑은 고딕','궁서','Nanum Gothic'],
+			fontSizes: ['8','10','12','14','16','18','20','22','24','26','28','30'],
+			fontNamesIgnoreCheck: ['Nanum Gothic']
 		});
-	});//textarea 중 content아이디영역을 섬머노트에디터로 변경처리 함수실행
-  
+	});
 </script>
 </body>
 </html>
